@@ -1,0 +1,18 @@
+.container{
+    background-color: aqua;
+}
+
+.row{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+$columns:12;
+
+[class^=col-]{
+    flex-basis:100%;
+}
+
+@media (min-width:960px){
+    
+}
