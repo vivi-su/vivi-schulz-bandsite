@@ -29,7 +29,8 @@
     text-align: center;
 
     flex: 1 1 0;
-    &--active {
+    border-bottom: 3px solid transparent;
+    &--active{
       border-bottom: 3px solid $primary-white;
     }
 
@@ -58,8 +59,10 @@
   }
 
   &__menu-item {
+    border-bottom: none;
   
-    padding:4.8rem;
+  
+    padding:5.4rem;
     &--active {
       border-bottom: none;
     }
@@ -67,14 +70,15 @@
       border-bottom: none;
     }
     }
+
   &__menu-item-link {
-   
+    padding-bottom:5.4rem;
+      border-bottom: 3px solid transparent;
      &--active {
-        padding-bottom:5.4rem;
       border-bottom: 3px solid $primary-white;
     }
     &:hover {
-        padding-bottom:5.4rem;
+   
       border-bottom: 3px solid $secondary-darkBlack;
     }
   }

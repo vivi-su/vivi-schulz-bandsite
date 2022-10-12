@@ -99,6 +99,7 @@ table {
   padding-bottom: 1.6rem;
   text-align: center;
   flex: 1 1 0;
+  border-bottom: 3px solid transparent;
 }
 .header__menu-item--active {
   border-bottom: 3px solid #FFFFFF;
@@ -126,7 +127,8 @@ table {
     font-size: 3.6rem;
   }
   .header__menu-item {
-    padding: 4.8rem;
+    border-bottom: none;
+    padding: 5.4rem;
   }
   .header__menu-item--active {
     border-bottom: none;
@@ -134,12 +136,14 @@ table {
   .header__menu-item:hover {
     border-bottom: none;
   }
-  .header__menu-item-link--active {
+  .header__menu-item-link {
     padding-bottom: 5.4rem;
+    border-bottom: 3px solid transparent;
+  }
+  .header__menu-item-link--active {
     border-bottom: 3px solid #FFFFFF;
   }
   .header__menu-item-link:hover {
-    padding-bottom: 5.4rem;
     border-bottom: 3px solid #000000;
   }
 }
