@@ -1,3 +1,84 @@
+@use "../reset" as *;
+@use "../fonts" as *;
 @use "../colors" as *;
-@use "../breakpoints" as breakpoints;
+@use "../mixins" as mixins;
 
+/* styles for header for mobile */
+.header {
+  background-color: $primary-black;
+  font-size: 2.4rem;
+  color: $primary-white;
+  font-style: normal;
+  font-weight: 600;
+
+  text-align: center;
+  padding: 0;
+  @include mixins.flexed(column, center, space-evenly);
+
+  &__company-name {
+    padding-top: 2.4rem;
+    padding-bottom: 1.6rem;
+  }
+
+  &__menu {
+    @include mixins.flexed(row, space-evenly, center);
+  }
+
+  &__menu-item {
+    padding-bottom: 1.6rem;
+    text-align: center;
+
+    flex: 1 1 0;
+    &--active {
+      border-bottom: 3px solid $primary-white;
+    }
+
+    &:hover {
+      border-bottom: 3px solid $secondary-darkBlack;
+    }
+  }
+
+  &__menu-item-link {
+    color: $primary-white;
+  }
+}
+/* styles for header on tablet device */
+
+@include mixins.mq(medium) {
+  .header {
+    font-size: 6rem;
+    @include mixins.flexed(row, flex-start, center);
+
+  &__company-name {
+   padding: 4.8rem;
+  }
+
+  &__navigation{
+    font-size: 3.6rem;
+  }
+
+  &__menu-item {
+  
+    padding:4.8rem;
+    &--active {
+      border-bottom: none;
+    }
+    &:hover {
+      border-bottom: none;
+    }
+    }
+  &__menu-item-link {
+   
+     &--active {
+        padding-bottom:5.4rem;
+      border-bottom: 3px solid $primary-white;
+    }
+    &:hover {
+        padding-bottom:5.4rem;
+      border-bottom: 3px solid $secondary-darkBlack;
+    }
+  }
+ 
+}
+}
+/* styles for header on desktop */

@@ -1,0 +1,30 @@
+@use 'sass:map';
+
+/* media query */
+$breakpoints:(
+  medium:768px,
+  large:1280px
+  );
+@mixin mq($key){
+  $size:map.get($breakpoints, $key);
+  @media (min-width:$size){
+    @content;
+  }
+}
+
+
+@mixin flexed($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin container($max-width: 1280px) {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
