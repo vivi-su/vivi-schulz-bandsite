@@ -7,6 +7,7 @@
 .header {
   background-color: $primary-black;
   font-size: 2.4rem;
+      font-size: clamp(2.4rem,2.5vw,6.4rem);
   color: $primary-white;
   font-style: normal;
   font-weight: 600;
