@@ -84,6 +84,7 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: space-evenly;
+  width: 100%;
 }
 .header__company-name {
   padding-top: 2.4rem;
@@ -127,6 +128,7 @@ table {
     font-size: 3.6rem;
   }
   .header__menu-item {
+    width: 100%;
     border-bottom: none;
     padding: 5.4rem;
   }
@@ -147,7 +149,49 @@ table {
     border-bottom: 3px solid #000000;
   }
 }
-/* styles for header on desktop */
+.hero {
+  width: 100vw;
+  height: 30vh;
+  padding: 1.6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(../../../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
+  /* change hero capacity */
+  position: relative;
+  /* change hero capacity */
+}
+.hero__title {
+  /* change hero capacity */
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* styles for hero on tablet device */
+@media (min-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+  .hero__title {
+    font-size: 6.8rem;
+    padding: 4.8rem;
+  }
+}
 html {
   font-size: 62.5%;
   box-sizing: border-box;

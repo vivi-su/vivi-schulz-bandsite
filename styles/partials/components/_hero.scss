@@ -1,0 +1,49 @@
+@use "../reset" as *;
+@use "../fonts" as *;
+@use "../colors" as *;
+@use "../mixins" as mixins;
+
+.hero {
+  width: 100vw;
+  height: 30vh;
+  padding: 1.6rem;
+  text-align: center;
+  @include mixins.flexed(column, center, flex-start);
+  background-image: url(../../../assets/Images/hero-bio.jpg);
+  background-size: cover;
+  background-position: center;
+  /* change hero capacity */
+  position: relative;
+
+  &__title {
+    /* change hero capacity */
+    position: relative;
+
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $primary-white;
+  }
+
+  /* change hero capacity */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* styles for hero on tablet device */
+
+@include mixins.mq(medium) {
+  .hero {
+    height: 70vh;
+    &__title {
+      font-size: 6.8rem;
+      padding: 4.8rem;
+    }
+  }
+}

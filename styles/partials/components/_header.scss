@@ -14,6 +14,7 @@
   text-align: center;
   padding: 0;
   @include mixins.flexed(column, center, space-evenly);
+  width:100%;
 
   &__company-name {
     padding-top: 2.4rem;
@@ -30,7 +31,7 @@
 
     flex: 1 1 0;
     border-bottom: 3px solid transparent;
-    &--active{
+    &--active {
       border-bottom: 3px solid $primary-white;
     }
 
@@ -50,39 +51,37 @@
     font-size: 6rem;
     @include mixins.flexed(row, flex-start, center);
 
-  &__company-name {
-   padding: 4.8rem;
-  }
+    &__company-name {
+      padding: 4.8rem;
+    }
 
-  &__navigation{
-    font-size: 3.6rem;
-  }
+    &__navigation {
+      font-size: 3.6rem;
+    }
 
-  &__menu-item {
-    border-bottom: none;
-  
-  
-    padding:5.4rem;
-    &--active {
+    &__menu-item {
+     
+      width:100%;
       border-bottom: none;
-    }
-    &:hover {
-      border-bottom: none;
-    }
+
+      padding: 5.4rem;
+      &--active {
+        border-bottom: none;
+      }
+      &:hover {
+        border-bottom: none;
+      }
     }
 
-  &__menu-item-link {
-    padding-bottom:5.4rem;
+    &__menu-item-link {
+      padding-bottom: 5.4rem;
       border-bottom: 3px solid transparent;
-     &--active {
-      border-bottom: 3px solid $primary-white;
-    }
-    &:hover {
-   
-      border-bottom: 3px solid $secondary-darkBlack;
+      &--active {
+        border-bottom: 3px solid $primary-white;
+      }
+      &:hover {
+        border-bottom: 3px solid $secondary-darkBlack;
+      }
     }
   }
- 
 }
-}
-/* styles for header on desktop */
