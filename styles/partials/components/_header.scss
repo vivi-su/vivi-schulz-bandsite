@@ -6,39 +6,35 @@
 /* styles for header for mobile */
 .header {
   background-color: $primary-black;
-
-  font-size: clamp(2.4rem,5vw,6.4rem);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
   color: $primary-white;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
- 
+
   @include mixins.flexed(column, center, space-evenly);
-  width:100%;
+  width: 100%;
 
   &__company-name {
     padding-top: 2.4rem;
     padding-bottom: 1.6rem;
   }
 
-
   &__menu {
     @include mixins.flexed(row, space-evenly, center);
   }
 
   &__menu-item {
-   
     padding-bottom: 1.6rem;
     text-align: center;
 
     flex: 1 1 0;
     border-bottom: 3px solid transparent;
-    &--active {
-      border-bottom: 3px solid $primary-white;
-    }
 
-    &:hover {
-      border-bottom: 3px solid $secondary-darkBlack;
+    &:hover,
+    &:active {
+      font-weight: 600;
+      border-bottom: 3px solid $primary-white;
     }
   }
 
@@ -48,7 +44,7 @@
 }
 /* styles for header on tablet device */
 
-@include mixins.mq-medium{
+@include mixins.mq-medium {
   .header {
     @include mixins.flexed(row, flex-start, center);
 
@@ -61,11 +57,20 @@
     }
 
     &__menu-item {
-     @include mixins.flexed(column, center, center);
-
-      padding: 4.8rem 5.4rem;
-    
-  }
-
+      @include mixins.flexed(column, center, center);
+      padding: 0 5.4rem;
+      border-bottom: 0;
+      &:hover {
+        border-bottom: 0;
+      }
+    }
+    &__menu-item-link {
+      padding: 2.4rem 0;
+      border-bottom: 3px solid transparent;
+      &:hover,
+      &:active {
+        border-bottom: 3px solid $primary-white;
+      }
+    }
   }
 }
