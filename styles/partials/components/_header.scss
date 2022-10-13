@@ -7,11 +7,10 @@
 .header {
   background-color: $primary-black;
 
-      font-size: clamp(2.4rem,5vw,6.4rem);
+  font-size: clamp(2.4rem,5vw,6.4rem);
   color: $primary-white;
   font-style: normal;
   font-weight: 600;
-
   text-align: center;
  
   @include mixins.flexed(column, center, space-evenly);
@@ -28,6 +27,7 @@
   }
 
   &__menu-item {
+   
     padding-bottom: 1.6rem;
     text-align: center;
 
@@ -53,7 +53,7 @@
     @include mixins.flexed(row, flex-start, center);
 
     &__company-name {
-      padding: 4.8rem;
+      padding: 0 4.8rem;
     }
 
     &__navigation {
@@ -61,28 +61,11 @@
     }
 
     &__menu-item {
-     
-      width:100%;
-      border-bottom: none;
+     @include mixins.flexed(column, center, center);
 
-      padding: 5.4rem;
-      &--active {
-        border-bottom: none;
-      }
-      &:hover {
-        border-bottom: none;
-      }
-    }
+      padding: 4.8rem 5.4rem;
+    
+  }
 
-    &__menu-item-link {
-      padding-bottom: 5.4rem;
-      border-bottom: 3px solid transparent;
-      &--active {
-        border-bottom: 3px solid $primary-white;
-      }
-      &:hover {
-        border-bottom: 3px solid $secondary-darkBlack;
-      }
-    }
   }
 }

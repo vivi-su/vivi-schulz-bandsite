@@ -122,31 +122,17 @@ table {
     align-items: center;
   }
   .header__company-name {
-    padding: 4.8rem;
+    padding: 0 4.8rem;
   }
   .header__navigation {
     font-size: 3.6rem;
   }
   .header__menu-item {
-    width: 100%;
-    border-bottom: none;
-    padding: 5.4rem;
-  }
-  .header__menu-item--active {
-    border-bottom: none;
-  }
-  .header__menu-item:hover {
-    border-bottom: none;
-  }
-  .header__menu-item-link {
-    padding-bottom: 5.4rem;
-    border-bottom: 3px solid transparent;
-  }
-  .header__menu-item-link--active {
-    border-bottom: 3px solid #FFFFFF;
-  }
-  .header__menu-item-link:hover {
-    border-bottom: 3px solid #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4.8rem 5.4rem;
   }
 }
 .hero {
