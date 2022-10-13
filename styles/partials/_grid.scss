@@ -1,0 +1,23 @@
+@use "./mixins" as mixins;
+
+.grid{
+    display:grid;
+    gap:1.6rem;
+}
+
+@include mixins.mq-medium{
+    .grid--1x2{
+        grid-template-columns: repeat(2,1fr);
+        gap:2.4rem;
+    }
+}
+
+@include mixins.mq-large{
+    .grid--1x2{
+        grid-template-columns: repeat(2,1fr);
+        gap:2.4rem;
+    }
+}
+
+
+

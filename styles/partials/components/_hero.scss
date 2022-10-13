@@ -17,7 +17,7 @@
   &__title {
     /* change hero capacity */
     position: relative;
-    font-size:clamp( 3.6rem,5vw,6.8rem);
+    font-size:3.6rem;
     padding:2.4rem;
     font-weight: 700;
     color: $primary-white;
@@ -41,6 +41,7 @@
   .hero {
     height: 70vh;
     &__title {
+      font-size: 6rem;
       padding: 4.8rem;
     }
   }

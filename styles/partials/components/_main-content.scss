@@ -1,0 +1,85 @@
+@use "../reset" as *;
+@use "../fonts" as *;
+@use "../colors" as *;
+@use "../mixins" as mixins;
+
+.main {
+  color: $primary-black;
+
+  &__musician {
+    font-weight: 600;
+    padding: 0 1.6rem;
+  }
+
+  &__musician-title {
+    font-size: 3.6rem;
+    padding-top: 2.4rem;
+    padding-bottom: 1.6rem;
+  }
+
+  &__musician-image {
+    width: 100%;
+  }
+
+  &__musician-subtitle {
+    padding-top: 1.6rem;
+    font-size: 2.4rem;
+    line-height: 1.8;
+  }
+
+  &__musician-author {
+    padding-bottom: 3.2rem;
+    line-height: 1.4;
+  }
+
+  &__bees {
+    padding: 0 1.6rem;
+    color: $secondary-darkBlack;
+  }
+
+  &__bees-title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 1.375;
+    font-weight: 600;
+  }
+
+  &__bees-content {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+}
+
+@include mixins.mq-medium {
+  .main {
+    &__musician {
+      padding: 0 3.6rem;
+    }
+
+    &__musician-title {
+      font-size: 3.6rem;
+      padding-top: 4.8rem;
+      padding-bottom: 3.6rem;
+    }
+
+    &__musician-subtitle {
+    padding-top: 3.2rem;
+   
+    line-height: 1.8;
+  }
+
+  &__musician-author {
+    padding-bottom: 4.8rem;
+  }
+
+  &__bees-content {
+    font-size: 2rem;
+  }
+
+    &__musician-wraper,
+    &__bees {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
