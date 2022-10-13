@@ -6,7 +6,6 @@
 .hero {
   width: 100vw;
   height: 30vh;
-  padding: 1.6rem;
   text-align: center;
   @include mixins.flexed(column, center, flex-start);
   background-image: url(../../../assets/Images/hero-bio.jpg);
@@ -14,12 +13,12 @@
   background-position: center;
   /* change hero capacity */
   position: relative;
-
+  
   &__title {
     /* change hero capacity */
     position: relative;
-font-size: 2.4rem;
-
+    font-size:clamp( 2.4rem,5vw,6.8rem);
+    padding:2.4rem;
     font-weight: 700;
     color: $primary-white;
   }
@@ -38,11 +37,10 @@ font-size: 2.4rem;
 
 /* styles for hero on tablet device */
 
-@include mixins.mq(medium) {
+@include mixins.mq-medium{
   .hero {
     height: 70vh;
     &__title {
-      font-size: 6.8rem;
       padding: 4.8rem;
     }
   }

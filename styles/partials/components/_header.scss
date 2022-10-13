@@ -6,14 +6,14 @@
 /* styles for header for mobile */
 .header {
   background-color: $primary-black;
-  font-size: 2.4rem;
-      font-size: clamp(2.4rem,2.5vw,6.4rem);
+
+      font-size: clamp(2.4rem,5vw,6.4rem);
   color: $primary-white;
   font-style: normal;
   font-weight: 600;
 
   text-align: center;
-  padding: 0;
+ 
   @include mixins.flexed(column, center, space-evenly);
   width:100%;
 
@@ -21,6 +21,7 @@
     padding-top: 2.4rem;
     padding-bottom: 1.6rem;
   }
+
 
   &__menu {
     @include mixins.flexed(row, space-evenly, center);
@@ -47,9 +48,8 @@
 }
 /* styles for header on tablet device */
 
-@include mixins.mq(medium) {
+@include mixins.mq-medium{
   .header {
-    font-size: 6rem;
     @include mixins.flexed(row, flex-start, center);
 
     &__company-name {
