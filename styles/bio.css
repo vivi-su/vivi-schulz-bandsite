@@ -178,7 +178,6 @@ table {
   padding: 2.4rem;
   font-weight: 700;
   color: #FFFFFF;
-  letter-spacing: 3px;
 }
 .hero::before {
   content: "";
@@ -198,6 +197,7 @@ table {
   .hero__title {
     font-size: 7rem;
     padding: 4.8rem;
+    letter-spacing: 3px;
   }
 }
 .grid, .gallery__image-wrap, .main__bees, .main__bees-content {
@@ -313,6 +313,45 @@ table {
     margin: 0 auto;
   }
 }
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 3.2rem 1.6rem 2.4rem 1.6rem;
+}
+.footer__touch {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
+.footer__image {
+  width: 100%;
+  max-width: 3rem;
+  max-height: 3rem;
+}
+.footer__image-wrap {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+.footer__content {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+.footer__content-wrap {
+  padding-bottom: 2.4rem;
+}
+.footer__content--styling {
+  padding-bottom: 2.4rem;
+}
+.footer__content-inner--styling {
+  font-weight: 600;
+}
+.footer__content-inner--padding {
+  padding-bottom: 2.4rem;
+}
+.footer__copyright {
+  font-size: 1.8rem;
+  padding-top: 8rem;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;

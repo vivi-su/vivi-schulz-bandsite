@@ -21,7 +21,7 @@
     padding:2.4rem;
     font-weight: 700;
     color: $primary-white;
-    letter-spacing: 3px;
+    
   }
 
   /* change hero capacity */
@@ -44,6 +44,7 @@
     &__title {
       font-size: 7rem;
       padding: 4.8rem;
+      letter-spacing: 3px;
     }
   }
 }

@@ -1,0 +1,53 @@
+@use "../reset" as *;
+@use "../fonts" as *;
+@use "../colors" as *;
+@use "../grid" as *;
+@use "../mixins" as mixins;
+
+.footer{
+    background-color:$primary-black ;
+    color:$primary-white;
+     padding: 3.2rem 1.6rem 2.4rem 1.6rem;
+
+    &__touch{
+        font-size: 3.6rem;
+        font-weight: 600;
+    }
+
+    &__image{
+        width:100%;
+        max-width:3rem;
+        max-height:3rem;
+    }
+
+    &__image-wrap{
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+    }
+
+    &__content{
+        font-size:1.8rem;
+        line-height: 1.4;
+    }
+
+    &__content-wrap{
+        padding-bottom: 2.4rem;
+    }
+
+    &__content--styling{
+        padding-bottom:2.4rem;
+    }
+
+    &__content-inner--styling{
+        font-weight: 600;
+    }
+
+    &__content-inner--padding{
+        padding-bottom:2.4rem;
+    }
+
+    &__copyright{
+        font-size:1.8rem;
+        padding-top: 8rem;
+    }
+}
