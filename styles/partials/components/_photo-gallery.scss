@@ -1,0 +1,50 @@
+@use "../reset" as *;
+@use "../fonts" as *;
+@use "../colors" as *;
+@use "../mixins" as mixins;
+@use "../grid" as *;
+
+.gallery{
+    width:100%;
+    height:auto;
+    background-color: $secondary-alabaster;
+    padding-left:1.6rem;
+    padding-right:1.6rem;
+    
+    &__image-wrap{
+        @extend .grid;
+        @extend .grid--1x3;
+        padding-top:1.6rem;
+        padding-bottom:2.4rem;
+
+    }
+
+    &__title{
+    font-weight: 600;
+    font-size: 3.6rem;
+    padding-top: 2.4rem;
+    padding-bottom: 1.6rem;
+    color:$primary-black;
+    }
+
+    &__image{
+        width:100%;
+        height:auto;
+        max-width:100%;
+        object-fit:cover;
+    
+    }
+}
+
+@include mixins.mq-medium{
+    .gallery{
+        padding:2.4rem 1.6rem;
+     
+        &__wrap{
+            width:90vw;
+            margin:0 auto;
+            
+    }
+    
+}
+}

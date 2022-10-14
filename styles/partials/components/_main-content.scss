@@ -1,6 +1,7 @@
 @use "../reset" as *;
 @use "../fonts" as *;
 @use "../colors" as *;
+@use "../grid" as *;
 @use "../mixins" as mixins;
 
 .main {
@@ -28,12 +29,13 @@
   }
 
   &__musician-author {
-    padding-bottom: 3.2rem;
+    padding-bottom: 1.2rem;
     line-height: 1.4;
   }
 
   &__bees {
-    padding: 0 1.6rem;
+    @extend .grid;
+    padding: 2.4rem 1.6rem;
     color: $secondary-darkBlack;
   }
 
@@ -45,6 +47,8 @@
   }
 
   &__bees-content {
+    @extend .grid;
+    @extend .grid--1x2;
     font-size: 1.8rem;
     line-height: 1.4;
   }
@@ -63,18 +67,18 @@
     }
 
     &__musician-subtitle {
-    padding-top: 3.2rem;
-   
-    line-height: 1.8;
-  }
+      padding-top: 3.2rem;
 
-  &__musician-author {
-    padding-bottom: 4.8rem;
-  }
+      line-height: 1.8;
+    }
 
-  &__bees-content {
-    font-size: 2rem;
-  }
+    &__musician-author {
+      padding-bottom: 4.8rem;
+    }
+
+    &__bees-content {
+      font-size: 2rem;
+    }
 
     &__musician-wraper,
     &__bees {

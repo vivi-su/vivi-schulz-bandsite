@@ -1,7 +1,8 @@
 @use "./partials/components/header";
 @use "./partials/components/hero";
 @use "./partials/components/main-content";
-@use "./partials/grid";
+@use "./partials/components/photo-gallery";
+
 
 html {
   font-size: 62.5%;
