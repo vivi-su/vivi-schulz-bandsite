@@ -4,50 +4,110 @@
 @use "../grid" as *;
 @use "../mixins" as mixins;
 
-.footer{
-    background-color:$primary-black ;
-    color:$primary-white;
-     padding: 3.2rem 1.6rem 2.4rem 1.6rem;
+.footer {
+  background-color: $primary-black;
+  color: $primary-white;
+  padding: 3.2rem 1.6rem 2.4rem 1.6rem;
+  line-height: 1.4;
+  
+  &__wraper{
+    width:90vw;
+    margin:0 auto;
+  }
 
-    &__touch{
-        font-size: 3.6rem;
-        font-weight: 600;
+  &__touch {
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
+
+  &__icon {
+    width: 100%;
+    max-width: 3rem;
+    max-height: 3rem;
+    margin-right: 2.4rem;
+  }
+
+  &__icon-wrap {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+
+  &__content {
+    font-size: 1.8rem;
+
+    width: 100%;
+  }
+
+  &__content-wrap {
+    padding-bottom: 2.4rem;
+  }
+
+  &__content--styling {
+    padding-bottom: 2.4rem;
+  }
+
+  &__content-inner--styling {
+    font-weight: 600;
+  }
+
+  &__content-inner--padding {
+    padding-bottom: 2.4rem;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 30vw;
+    padding-block: 2.4rem;
+  }
+
+  &__logo--md {
+    display: none;
+  }
+
+  &__copyright {
+    font-size: 1.8rem;
+  }
+}
+
+@include mixins.mq-medium {
+  .footer {
+    padding: 4.8rem 3.2rem;
+    line-height:1.25;
+
+    &__logo {
+      width:min(18vw, 15rem);
     }
 
-    &__image{
-        width:100%;
-        max-width:3rem;
-        max-height:3rem;
+    &__logo--sm {
+      display: none;
     }
 
-    &__image-wrap{
-        padding-top: 2.4rem;
-        padding-bottom: 2.4rem;
+    &__logo--md {
+      display: block;
     }
 
-    &__content{
-        font-size:1.8rem;
-        line-height: 1.4;
+    &__touch {
+      @include mixins.flexed(row, flex-start, center);
     }
 
-    &__content-wrap{
-        padding-bottom: 2.4rem;
+    &__icon-wrap {
+      flex-basis: 20rem;
+      margin-left: 3rem;
+      flex-grow: 1;
     }
 
-    &__content--styling{
-        padding-bottom:2.4rem;
+    &__content {
+      @include mixins.flexed(row, flex-start, flex-start);
+      padding-top: 3.2rem;
+      font-size:1.4rem;
     }
 
-    &__content-inner--styling{
-        font-weight: 600;
-    }
-
-    &__content-inner--padding{
-        padding-bottom:2.4rem;
+    &__content-wrap {
+      padding-right: 2vw;
     }
 
     &__copyright{
-        font-size:1.8rem;
-        padding-top: 8rem;
+        font-size:1.4rem;
     }
+  }
 }

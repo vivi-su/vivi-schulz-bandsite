@@ -11,20 +11,22 @@
   background-image: url(../../../assets/Images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
-  /* change hero capacity */
+
+  /* change hero opacity */
   position: relative;
   
   &__title {
-    /* change hero capacity */
+    /* change hero opacity */
     position: relative;
+
     font-size:3.2rem;
-    padding:2.4rem;
+    padding:2rem;
     font-weight: 700;
     color: $primary-white;
     
   }
 
-  /* change hero capacity */
+  /* change hero  */
   &::before {
     content: "";
     position: absolute;
@@ -40,9 +42,9 @@
 
 @include mixins.mq-medium{
   .hero {
-    height: 70vh;
+    height: 50vh;
     &__title {
-      font-size: 7rem;
+      font-size: 6rem;
       padding: 4.8rem;
       letter-spacing: 3px;
     }

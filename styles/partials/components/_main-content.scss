@@ -61,23 +61,30 @@
     }
 
     &__musician-title {
-      font-size: 3.6rem;
+      font-size: 4.8rem;
       padding-top: 4.8rem;
       padding-bottom: 3.6rem;
     }
 
     &__musician-subtitle {
       padding-top: 3.2rem;
-
-      line-height: 1.8;
+      font-size:3.2rem;
+      line-height: 1.5;
     }
 
     &__musician-author {
+     font-size:2.4rem;
+     padding-top:1.6rem;
       padding-bottom: 4.8rem;
     }
 
+     &__bees-title {
+    font-size: 3.6rem;
+  }
+
     &__bees-content {
       font-size: 2rem;
+      line-height:1.5;
     }
 
     &__musician-wraper,
