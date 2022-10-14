@@ -8,7 +8,7 @@
   height: 30vh;
   text-align: center;
   @include mixins.flexed(column, center, flex-start);
-  background-image: url(../../../assets/Images/hero-bio.jpg);
+background-image: url(../../../assets/Images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
 
