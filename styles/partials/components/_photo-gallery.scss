@@ -1,6 +1,6 @@
 @use "../fonts" as *;
 @use "../colors" as *;
-@use "../grid" as *;
+// @use "../grid" as *;
 @use "../mixins" as mixins;
 
 .gallery{
@@ -11,10 +11,11 @@
     padding-right:1.6rem;
     
     &__image-wrap{
-        @extend .grid;
-        @extend .grid--1x3;
+        // @extend .grid;
+        // @extend .grid--1x3;
         padding-top:1.6rem;
         padding-bottom:2.4rem;
+        
 
     }
 
@@ -26,6 +27,7 @@
     }
 
     &__image{
+        padding-bottom:1.6rem;
         width:100%;
         height:auto;
         max-width:100%;
@@ -42,13 +44,24 @@
 
 @include mixins.mq-medium{
     .gallery{
-        padding:2.4rem 1.6rem;
+        padding:2.4rem 1.6rem 0;
      
         &__wrap{
             width:90vw;
-            margin:0 auto;
-            
-    }
+            margin:0 auto;        
+        }
+
+        &__image-wrap{
+            @include mixins.flexed(row, center, center);
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        &__image{
+            margin: 0 auto;
+            display: inline-block;
+            max-width:31%;
+        }
     
 }
 }
