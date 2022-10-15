@@ -6,7 +6,6 @@
 .header {
   background-color: $primary-black;
   font-size: 2rem;
-  color: $primary-white;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -15,19 +14,15 @@
   width: 100%;
 
   &__logo {
-    @include mixins.flexed(column, center, center);
     width:100%;
-    max-width:35vw;
-    padding-block:1.6rem;
-    margin:0 auto;
-    // background-color: aquamarine;
-  }
-
-  &__navigation {
-    padding-block:0;
-    // background-color: green;
+    max-width:15rem;
+    height: 8rem;
+    cursor: pointer;
+     color: $primary-white;
+    @include mixins.hover-effect($secondary-mercury);
 
   }
+
 
   &__menu {
     @include mixins.flexed(row, space-evenly, center);
@@ -35,12 +30,12 @@
   }
 
   &__menu-item {
-    // background-color: purple;
     padding-bottom:1.3rem;
     text-align: center;
     color:$secondary-mercury;
     flex: 1 1 0;
     border-bottom: 4px solid transparent;
+    transition: border 0.2s ease-in-out;
 
     &:hover,
     &:active {
@@ -61,18 +56,22 @@
 
     
     &__logo {
- 
+       color: $primary-white;
       padding-left:4.8rem;
+      width:30rem;
+      box-sizing: content-box;
+      @include mixins.flexed(column, center, center);
       
-      height:auto;
-      box-sizing:content-box;
-      
+    }
+
+    &__menu{
+      padding-left: 4.2rem;
+      @include mixins.flexed(row, flex-start, center);
     }
 
     &__menu-item {
       @include mixins.flexed(column, flex-end, center);
-      position:relative;
-      left:8rem;
+     
       padding: 0 2.4rem;
       border-bottom: 0;
       &:hover {

@@ -27,12 +27,21 @@ $desktop-min-width:1280px;
 }
 
 
-
+/* Flex */
 @mixin flexed($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+
+/* hover-effect */
+@mixin hover-effect($color){
+    transition: all .25s ease-in-out;
+    &:hover{
+    color:$color;
+    }
 }
 
 

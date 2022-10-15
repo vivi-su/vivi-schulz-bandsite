@@ -2,6 +2,8 @@
 @use "../colors" as *;
 @use "../mixins" as mixins;
 
+
+
 .footer {
   background-color: $primary-black;
   color: $primary-white;
@@ -33,8 +35,10 @@
     max-width: 3rem;
     max-height: 3rem;
     margin-right: 2.4rem;
+    cursor: pointer; 
+    @include mixins.hover-effect($primary-silver);
   }
-
+  
   &__icon-wrap {
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
@@ -44,9 +48,7 @@
     a {
       color: $primary-white;
       cursor: pointer;
-      &:hover {
-        color: $secondary-mercury;
-      }
+      @include mixins.hover-effect($primary-silver);
     }
   }
 
@@ -64,8 +66,13 @@
 
   &__logo {
     width: 100%;
-    max-width: 40vw;
-    padding-block: 2.4rem;
+    max-width: 15rem;
+    height:5rem;
+    padding-top:2.4rem;  
+    padding-bottom:1.6rem;
+    box-sizing: content-box;
+    color: $primary-white;
+    @include mixins.hover-effect($primary-silver);
   }
 
   &__logo--md {
@@ -88,7 +95,10 @@
 
     &__logo--md {
       display: block;
+      cursor: pointer;
+      @include mixins.hover-effect($primary-silver);
     }
+    
 
     &__touch {
       @include mixins.flexed(row, flex-start, center);

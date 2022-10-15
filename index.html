@@ -10,8 +10,15 @@
   <body>
     <!-- Header Component -->
     <header class="header">
-      <a src="./index.html"><img class="header__logo"src="./assets/Logos/Logo-bandsite.svg" alt="Bandsite"></a>
-      <nav class="header__navigation">
+      <!-- <a src="./index.html"><img class="header__logo"src="./assets/Logos/Logo-bandsite.svg" alt="Bandsite"></a>
+       <a href="./index.html"> -->
+             <a href="./index.html">
+               <svg class="header__logo">
+                    <use href="./assets/sprite.svg#Logo-bandsite " alt="Bandsite"></use>
+                  </svg>
+             </a>
+           
+      <nav>
         <ul class="header__menu">
           <li class="header__menu-item header__menu-item--default">
             <a
@@ -62,15 +69,15 @@
       <div class="gallery__wrap">
         <h3 class="gallery__title">Photo Gallery</h3>
         <div class="gallery__image-wrap">
-          <article><img class="gallery__image" src="./assets/Images/Photo-gallery-1.jpg" alt=""></article>
-          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-2.jpg" alt=""></article>
-          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-3.jpg" alt=""></article>
-          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-4.jpg" alt=""></article>
-          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-5.jpg" alt=""></article>
-          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-6.jpg" alt=""></article>
-          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-7.jpg" alt=""></article>
-          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-8.jpg" alt=""></article>
-          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-9.jpg" alt=""></article>
+          <article><img class="gallery__image" src="./assets/Images/Photo-gallery-1.jpg" alt="Photo-gallery-1"></article>
+          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-2.jpg" alt="Photo-gallery-2"></article>
+          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-3.jpg" alt="Photo-gallery-3"></article>
+          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-4.jpg" alt="Photo-gallery-4"></article>
+          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-5.jpg" alt="Photo-gallery-5"></article>
+          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-6.jpg" alt="Photo-gallery-6"></article>
+          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-7.jpg" alt="Photo-gallery-7"></article>
+          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-8.jpg" alt="Photo-gallery-8"></article>
+          <article ><img class="gallery__image" src="./assets/Images/Photo-gallery-9.jpg" alt="Photo-gallery-9"></article>
         </div>
       </div>
       
@@ -83,11 +90,22 @@
           <section class="footer__touch">
             <h5 class="footer__touch-title">Get in Touch</h5>
             <div class="footer__icon-wrap">
-              <img class="footer__icon" src="./assets/Icons/SVG/Icon-instagram.svg" alt="Instagram">
-              <img class="footer__icon" src="./assets/Icons/SVG/Icon-facebook.svg" alt="Facebook">
-              <img class="footer__icon" src="./assets/Icons/SVG/Icon-twitter.svg" alt="Twitter">
+              <svg class="footer__icon">
+                <use xlink:href="./assets/sprite.svg#Icon-instagram" alt="Icon-instagram"></use>
+              </svg>
+              <svg class="footer__icon">
+                <use href="./assets/sprite.svg#Icon-facebook " alt="Icon-facebook"></use>
+              </svg>
+              <svg class="footer__icon">
+                <use href="./assets/sprite.svg#Icon-twitter " alt="Icon-twitter"></use>
+              </svg>
+
             </div>
-             <img class="footer__logo footer__logo--md" src="./assets/Logos/Logo-bandsite.svg" alt="Bandsite">
+             <a href="./index.html">
+               <svg class="footer__logo footer__logo--md">
+                  <use href="./assets/sprite.svg#Logo-bandsite "></use>
+                </svg>
+             </a>
           </section>
           <section class="footer__content">
             <section class="footer__content-wrap">
@@ -131,7 +149,12 @@
             </section>
           </section>
           
-          <img class="footer__logo footer__logo--sm" src="./assets/Logos/Logo-bandsite.svg" alt="Bandsite">
+           <a href="./index.html">
+             <svg class="footer__logo footer__logo--sm">
+                  <use href="./assets/sprite.svg#Logo-bandsite " alt="Bandsite"></use>
+                </svg>
+           </a>
+
           <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
         </div>
      
