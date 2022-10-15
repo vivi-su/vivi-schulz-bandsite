@@ -1,21 +1,29 @@
-@use "../reset" as *;
 @use "../fonts" as *;
 @use "../colors" as *;
-@use "../grid" as *;
 @use "../mixins" as mixins;
 
 .footer {
   background-color: $primary-black;
   color: $primary-white;
+
   padding: 3.2rem 1.6rem 2.4rem 1.6rem;
   line-height: 1.4;
-  
-  &__wraper{
-    width:90vw;
-    margin:0 auto;
+
+  p {
+    font-size: 1.6rem;
   }
 
-  &__touch {
+  h6 {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__wraper {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  &__touch-title {
     font-size: 3.2rem;
     font-weight: 600;
   }
@@ -33,9 +41,13 @@
   }
 
   &__content {
-    font-size: 1.8rem;
-
-    width: 100%;
+    a {
+      color: $primary-white;
+      cursor: pointer;
+      &:hover {
+        color: $secondary-mercury;
+      }
+    }
   }
 
   &__content-wrap {
@@ -46,36 +58,28 @@
     padding-bottom: 2.4rem;
   }
 
-  &__content-inner--styling {
-    font-weight: 600;
-  }
-
   &__content-inner--padding {
     padding-bottom: 2.4rem;
   }
 
   &__logo {
     width: 100%;
-    max-width: 30vw;
+    max-width: 40vw;
     padding-block: 2.4rem;
   }
 
   &__logo--md {
     display: none;
   }
-
-  &__copyright {
-    font-size: 1.8rem;
-  }
 }
 
 @include mixins.mq-medium {
   .footer {
     padding: 4.8rem 3.2rem;
-    line-height:1.25;
+    line-height: 1.25;
 
     &__logo {
-      width:min(18vw, 15rem);
+      width: min(18vw, 15rem);
     }
 
     &__logo--sm {
@@ -99,15 +103,31 @@
     &__content {
       @include mixins.flexed(row, flex-start, flex-start);
       padding-top: 3.2rem;
-      font-size:1.4rem;
+      font-size: 1.4rem;
     }
 
     &__content-wrap {
-      padding-right: 2vw;
+      padding-right: 4vw;
     }
 
-    &__copyright{
-        font-size:1.4rem;
+    &__copyright {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@include mixins.mq-large {
+  .footer {
+    &__touch-title {
+      font-size: 4.5rem;
+    }
+
+    &__icon-wrap {
+      padding-left:2.2rem
+    }
+
+     &__content-wrap {
+      padding-right: 7vw;
     }
   }
 }

@@ -1,8 +1,7 @@
-@use "../reset" as *;
 @use "../fonts" as *;
 @use "../colors" as *;
-@use "../mixins" as mixins;
 @use "../grid" as *;
+@use "../mixins" as mixins;
 
 .gallery{
     width:100%;
@@ -23,7 +22,6 @@
     font-weight: 600;
     font-size: 3.6rem;
     padding-top: 2.4rem;
-    padding-bottom: 1.6rem;
     color:$primary-black;
     }
 
