@@ -1,0 +1,42 @@
+$mobile-max-width:767px;
+$tablet-min-width:768px;
+$desktop-min-width:1280px;
+
+/* media query for mobile */
+
+@mixin mq-small{
+    @media only screen and (max-width:$mobile-max-width){
+        @content;
+    }
+}
+
+/* media query for tablet */
+
+@mixin mq-medium{
+    @media only screen and (min-width:$tablet-min-width){
+        @content;
+    }
+}
+
+/* media query for desktop */
+
+@mixin mq-large{
+    @media only screen and (min-width:$desktop-min-width){
+        @content;
+    }
+}
+
+
+
+@mixin flexed($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+
+
+
+

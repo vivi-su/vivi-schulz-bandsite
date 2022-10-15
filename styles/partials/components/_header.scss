@@ -1,3 +1,94 @@
+@use "../fonts" as *;
 @use "../colors" as *;
-@use "../breakpoints" as breakpoints;
+@use "../mixins" as mixins;
+
+/* styles for header for mobile */
+.header {
+  background-color: $primary-black;
+  font-size: 2rem;
+  color: $primary-white;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+
+  @include mixins.flexed(column, center, space-evenly);
+  width: 100%;
+
+  &__logo {
+    @include mixins.flexed(column, center, center);
+    width:100%;
+    max-width:35vw;
+    padding-block:1.6rem;
+    margin:0 auto;
+    // background-color: aquamarine;
+  }
+
+  &__navigation {
+    padding-block:0;
+    // background-color: green;
+
+  }
+
+  &__menu {
+    @include mixins.flexed(row, space-evenly, center);
+    padding-inline-start:0;
+  }
+
+  &__menu-item {
+    // background-color: purple;
+    padding-bottom:1.3rem;
+    text-align: center;
+    color:$secondary-mercury;
+    flex: 1 1 0;
+    border-bottom: 4px solid transparent;
+
+    &:hover,
+    &:active {
+      font-weight: 600;
+      border-bottom: 4px solid $primary-white;
+    }
+  }
+
+  &__menu-item-link {
+    color: $primary-white;  
+  }
+}
+/* styles for header on tablet device */
+
+@include mixins.mq-medium {
+  .header {
+    @include mixins.flexed(row, flex-start, center);
+
+    
+    &__logo {
+ 
+      padding-left:4.8rem;
+      
+      height:auto;
+      box-sizing:content-box;
+      
+    }
+
+    &__menu-item {
+      @include mixins.flexed(column, flex-end, center);
+      position:relative;
+      left:8rem;
+      padding: 0 2.4rem;
+      border-bottom: 0;
+      &:hover {
+        border-bottom: 0;
+      }
+    }
+    &__menu-item-link {
+      font-size: 2rem;
+      padding: 3.2rem 0;
+      border-bottom: 4px solid transparent;
+      &:hover,
+      &:active {
+        border-bottom: 4px solid $primary-white;
+      }
+    }
+  }
+}
+
 

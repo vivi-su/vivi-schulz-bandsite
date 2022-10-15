@@ -1,27 +1,26 @@
-
 /* Regular */
 @font-face {
-    font-family: "Nunito";
+    font-family: "Avenir";
     src: url("../../assets/Fonts/AvenirNextLTPro-Regular.otf")
     format("opentype"), url("../../assets/Fonts/alternative/AvenirNextLTPro.ttf") format("truetype");
     font-weight: 400;
-    font-style:normal;
+
 }
 
 /* Demi*/
 @font-face {
-  font-family: "Nunito";
+  font-family: "Avenir";
   src: url("../../assets/Fonts/AvenirNextLTPro-Demi.otf")
     format("opentype"), url("../../assets/Fonts/alternative/AvenirNextLTProDemi.ttf") format("truetype");
   font-weight: 600;
-  font-style:normal;
+
 }
 
 /* Bold */
 @font-face {
-  font-family: "Nunito";
+  font-family: "Avenir";
   src: url("../../assets/Fonts/AvenirNextLTPro-Bold.otf")
     format("opentype"), url("../../assets/Fonts/alternative/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
-  font-style:normal;
+ 
 }
