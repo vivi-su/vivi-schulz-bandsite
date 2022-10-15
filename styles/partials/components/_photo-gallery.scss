@@ -30,7 +30,13 @@
         height:auto;
         max-width:100%;
         object-fit:cover;
-    
+        cursor: pointer;
+        filter:grayscale(70%);
+        transition: filter .25s ease-in-out;
+        &:hover{
+            filter:grayscale(0);
+        }
+          
     }
 }
 

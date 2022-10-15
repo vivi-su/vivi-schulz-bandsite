@@ -99,3 +99,12 @@
     }
   }
 }
+
+
+@include mixins.mq-large {
+.main {
+    &__musician {
+      padding: 0 5.6rem;
+    }
+}
+}
