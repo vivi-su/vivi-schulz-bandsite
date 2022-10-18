@@ -5,11 +5,7 @@
 
 .main {
   color: $primary-black;
-  line-height: 1.5;
-  
-  h4{
-     font-weight: 600;
-  }
+
 
   &__musician {
     padding: 0 1.6rem;
@@ -19,8 +15,8 @@
   &__musician-title {
     font-weight: 600;
     font-size: 2.4rem;
-    padding-top: 1.6rem;
-    padding-bottom: 1.2rem;
+    padding-top: 2.4rem;
+    padding-bottom: 1.6rem;
   }
 
   &__musician-image {
@@ -28,33 +24,29 @@
   }
 
   &__musician-subtitle {
+    h4{font-weight: 600;}
     padding-top: 1rem;
     font-size: 1.4rem;
-    line-height: 1.8;
+    line-height: 1.375;
     
-  }
-
-  &__musician-author {
-    margin: 0;
   }
 
   &__bees {
     // @extend .grid;
     color: $secondary-darkBlack;
-
+    line-height: 1.125;
     padding: 2.4rem 1.6rem;
   }
   
   &__bees-title {
-    
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    padding-bottom: 1.6rem;
   }
 
   &__bees-content {
     // @extend .grid;
     // @extend .grid--1x2;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     
   }
 }
@@ -62,34 +54,35 @@
 @include mixins.mq-medium {
   .main {
     &__musician {
-      padding: 0 3.6rem;
+      padding: 0 4.8rem;
     }
 
     &__musician-title {
-      font-size: 4.8rem;
+      font-size: 3.6rem;
       padding-top: 4.8rem;
       padding-bottom: 3.6rem;
     }
 
     &__musician-subtitle {
-      line-height: 1.4;
-      font-weight: 400;
-      padding-top: 3.2rem;
-      font-size: 2.8rem;
+      h4:nth-child(2){font-size: 2rem;}
+      line-height: 2;
+      padding-top: 4.8rem;
+      font-size: 2.4rem;
     }
-
-    &__musician-author {
-      font-size: 2.2rem;
-      padding-top: 1.6rem;
-      padding-bottom: 4.8rem;
+    
+    &__bees{
+      padding:0 3.6rem 3.6rem;
     }
 
     &__bees-title {
-      font-size: 3.6rem;
+      font-size: 2.4rem;
+      padding-top:4.8rem;
+      padding-bottom: 3.6rem;
     }
 
     &__bees-content {
-      font-size: 2rem;
+      font-size: 1.4rem;
+      line-height: 1.375;
     }
 
     &__musician-wraper,

@@ -14,15 +14,16 @@
         // @extend .grid;
         // @extend .grid--1x3;
         padding-top:1.6rem;
-        padding-bottom:2.4rem;
+        padding-bottom:1.6rem;
         
 
     }
 
     &__title{
     font-weight: 600;
-    font-size: 3.6rem;
+    font-size: 2.4rem;
     padding-top: 2.4rem;
+    padding-bottom:1.6rem;
     color:$primary-black;
     }
 
@@ -44,17 +45,24 @@
 
 @include mixins.mq-medium{
     .gallery{
-        padding:2.4rem 1.6rem 0;
+        &__title{
+            font-size: 3.6rem;
+            padding-top: 4.8rem;
+            padding-bottom:3.6rem;
+        }
      
         &__wrap{
             width:90vw;
-            margin:0 auto;        
+            margin:0 auto;   
+
         }
 
         &__image-wrap{
             @include mixins.flexed(row, center, center);
             flex-wrap: wrap;
             margin: 0 auto;
+            padding-top:0;
+            padding-bottom:4.8rem;
         }
 
         &__image{

@@ -21,10 +21,11 @@
 /* media query for desktop */
 /* Flex */
 /* hover-effect */
+/* logo */
 /* styles for header for mobile */
 .header {
   background-color: #323232;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -36,14 +37,16 @@
 }
 .header__logo {
   width: 100%;
-  max-width: 15rem;
-  height: 8rem;
+  max-width: 12rem;
+  max-height: 2rem;
+  margin: 1.5rem 1.5rem 1.5rem 0;
+  box-sizing: content-box;
   cursor: pointer;
   color: #FFFFFF;
   transition: all 0.25s ease-in-out;
 }
 .header__logo:hover {
-  color: #E1E1E1;
+  color: #AFAFAF;
 }
 .header__menu {
   display: flex;
@@ -78,10 +81,7 @@
     align-items: center;
   }
   .header__logo {
-    color: #FFFFFF;
     padding-left: 4.8rem;
-    width: 30rem;
-    box-sizing: content-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,7 +106,7 @@
     border-bottom: 0;
   }
   .header__menu-item-link {
-    font-size: 2rem;
+    font-size: 2.4rem;
     padding: 3.2rem 0;
     border-bottom: 4px solid transparent;
   }
@@ -160,10 +160,6 @@
 }
 .main {
   color: #323232;
-  line-height: 1.5;
-}
-.main h4 {
-  font-weight: 600;
 }
 .main__musician {
   padding: 0 1.6rem;
@@ -171,8 +167,8 @@
 .main__musician-title {
   font-weight: 600;
   font-size: 2.4rem;
-  padding-top: 1.6rem;
-  padding-bottom: 1.2rem;
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
 }
 .main__musician-image {
   width: 100%;
@@ -180,48 +176,52 @@
 .main__musician-subtitle {
   padding-top: 1rem;
   font-size: 1.4rem;
-  line-height: 1.8;
+  line-height: 1.375;
 }
-.main__musician-author {
-  margin: 0;
+.main__musician-subtitle h4 {
+  font-weight: 600;
 }
 .main__bees {
   color: #000000;
+  line-height: 1.125;
   padding: 2.4rem 1.6rem;
 }
 .main__bees-title {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  padding-bottom: 1.6rem;
 }
 .main__bees-content {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 @media only screen and (min-width: 768px) {
   .main__musician {
-    padding: 0 3.6rem;
+    padding: 0 4.8rem;
   }
   .main__musician-title {
-    font-size: 4.8rem;
+    font-size: 3.6rem;
     padding-top: 4.8rem;
     padding-bottom: 3.6rem;
   }
   .main__musician-subtitle {
-    line-height: 1.4;
-    font-weight: 400;
-    padding-top: 3.2rem;
-    font-size: 2.8rem;
+    line-height: 2;
+    padding-top: 4.8rem;
+    font-size: 2.4rem;
   }
-  .main__musician-author {
-    font-size: 2.2rem;
-    padding-top: 1.6rem;
-    padding-bottom: 4.8rem;
+  .main__musician-subtitle h4:nth-child(2) {
+    font-size: 2rem;
+  }
+  .main__bees {
+    padding: 0 3.6rem 3.6rem;
   }
   .main__bees-title {
-    font-size: 3.6rem;
+    font-size: 2.4rem;
+    padding-top: 4.8rem;
+    padding-bottom: 3.6rem;
   }
   .main__bees-content {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.375;
   }
   .main__musician-wraper, .main__bees {
     width: 80%;
@@ -254,12 +254,13 @@
 }
 .gallery__image-wrap {
   padding-top: 1.6rem;
-  padding-bottom: 2.4rem;
+  padding-bottom: 1.6rem;
 }
 .gallery__title {
   font-weight: 600;
-  font-size: 3.6rem;
+  font-size: 2.4rem;
   padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
   color: #323232;
 }
 .gallery__image {
@@ -278,8 +279,10 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .gallery {
-    padding: 2.4rem 1.6rem 0;
+  .gallery__title {
+    font-size: 3.6rem;
+    padding-top: 4.8rem;
+    padding-bottom: 3.6rem;
   }
   .gallery__wrap {
     width: 90vw;
@@ -292,6 +295,8 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 4.8rem;
   }
   .gallery__image {
     margin: 0 auto;
@@ -299,17 +304,147 @@
     max-width: 31%;
   }
 }
+.comment {
+  width: 90vw;
+  margin: 0 auto;
+  line-height: 1.25;
+  font-size: 1rem;
+}
+.comment input::-moz-placeholder {
+  color: #323232;
+}
+.comment input:-ms-input-placeholder {
+  color: #323232;
+}
+.comment input::placeholder {
+  color: #323232;
+}
+.comment label {
+  display: block;
+  color: #AFAFAF;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+.comment input,
+.comment textarea,
+.comment button {
+  width: 100%;
+  padding: 1.2rem;
+  outline: 0;
+  margin-bottom: 1.2rem;
+  border-radius: 4px;
+}
+.comment input,
+.comment textarea {
+  color: #323232;
+  border: 1px solid #E1E1E1;
+  background-color: #FAFAFA;
+}
+.comment input:active,
+.comment textarea:active {
+  border: 1px solid #323232;
+}
+.comment input:invalid,
+.comment textarea:invalid {
+  border: 1px solid #d22d2d;
+}
+.comment textarea {
+  min-height: 3.6rem;
+}
+.comment button {
+  font-weight: 600;
+  height: 4rem;
+  background-color: #323232;
+  color: #FFFFFF;
+  border: 0;
+  cursor: pointer;
+}
+.comment button:hover {
+  background-color: #000000;
+}
+.comment__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  padding: 2.4rem 1.6rem 1.6rem 0;
+  color: #323232;
+}
+.comment__form-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.comment__form-image-wraper {
+  margin-top: 1.6rem;
+  margin-right: 1.6rem;
+}
+.comment__form-image {
+  position: relative;
+  width: 3.6rem;
+  height: 3.6rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.comment__form-image img {
+  width: 100%;
+  width: 3.6rem;
+  height: 3.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  .comment label {
+    font-size: 1.2rem;
+  }
+  .comment input,
+.comment textarea,
+.comment button {
+    font-size: 1.2rem;
+    padding: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .comment textarea {
+    min-height: 4.8rem;
+  }
+  .comment__title {
+    font-size: 3.6rem;
+    padding: 4.8rem 3.6rem 3.6rem 0;
+  }
+  .comment__empty {
+    flex: 1 1 0;
+  }
+  .comment__form-image {
+    position: relative;
+    width: 3.6rem;
+    height: 3.6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 1.6rem;
+  }
+  .comment__form-image img {
+    width: 100%;
+    width: 3.6rem;
+    height: 3.6rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    flex: 1 1 0;
+  }
+  .comment__form {
+    flex: 8 1 0;
+  }
+}
 .footer {
   background-color: #323232;
   color: #FFFFFF;
   padding: 3.2rem 1.6rem 2.4rem 1.6rem;
-  line-height: 1.4;
+  line-height: 1.125;
 }
 .footer p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 .footer h6 {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 .footer__wraper {
@@ -317,13 +452,13 @@
   margin: 0 auto;
 }
 .footer__touch-title {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   font-weight: 600;
 }
 .footer__icon {
   width: 100%;
-  max-width: 3rem;
-  max-height: 3rem;
+  max-width: 2.4rem;
+  max-height: 2.4rem;
   margin-right: 2.4rem;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -332,7 +467,10 @@
   color: #AFAFAF;
 }
 .footer__icon-wrap {
-  padding-top: 2.4rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+.footer__content {
   padding-bottom: 2.4rem;
 }
 .footer__content a {
@@ -343,22 +481,19 @@
 .footer__content a:hover {
   color: #AFAFAF;
 }
-.footer__content-wrap {
-  padding-bottom: 2.4rem;
-}
 .footer__content--styling {
-  padding-bottom: 2.4rem;
+  padding-bottom: 1.6rem;
 }
 .footer__content-inner--padding {
-  padding-bottom: 2.4rem;
+  padding-bottom: 1.6rem;
 }
 .footer__logo {
   width: 100%;
-  max-width: 15rem;
-  height: 5rem;
-  padding-top: 2.4rem;
-  padding-bottom: 1.6rem;
+  max-width: 12rem;
+  max-height: 2rem;
+  margin: 1.5rem 1.5rem 1.5rem 0;
   box-sizing: content-box;
+  cursor: pointer;
   color: #FFFFFF;
   transition: all 0.25s ease-in-out;
 }
@@ -425,7 +560,8 @@
     padding-right: 7vw;
   }
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: "Avenir", Arial;
@@ -433,9 +569,26 @@ html, body {
   box-sizing: border-box;
 }
 
-p, div, h1, h2, h3, h4, h5, h6, ul, li {
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
   margin: 0;
   font-weight: 400;
+}
+
+label,
+input,
+textarea,
+button {
+  font-family: inherit;
+  color: inherit;
 }
 
 *,
