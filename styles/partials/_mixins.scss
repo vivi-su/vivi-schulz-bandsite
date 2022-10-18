@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 $mobile-max-width:767px;
 $tablet-min-width:768px;
 $desktop-min-width:1280px;
@@ -42,6 +44,18 @@ $desktop-min-width:1280px;
     &:hover{
     color:$color;
     }
+}
+
+/* logo */
+
+@mixin logo{
+     width:100%;
+    max-width:12rem;
+    max-height: 2rem;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    box-sizing: content-box;
+    cursor: pointer;
+     color: $primary-white;
 }
 
 

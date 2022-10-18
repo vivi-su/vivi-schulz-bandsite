@@ -5,7 +5,7 @@
 /* styles for header for mobile */
 .header {
   background-color: $primary-black;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -14,12 +14,8 @@
   width: 100%;
 
   &__logo {
-    width:100%;
-    max-width:15rem;
-    height: 8rem;
-    cursor: pointer;
-     color: $primary-white;
-    @include mixins.hover-effect($secondary-mercury);
+    @include mixins.logo;
+    @include mixins.hover-effect($primary-silver);
 
   }
 
@@ -56,10 +52,7 @@
 
     
     &__logo {
-       color: $primary-white;
       padding-left:4.8rem;
-      width:30rem;
-      box-sizing: content-box;
       @include mixins.flexed(column, center, center);
       
     }
@@ -79,7 +72,7 @@
       }
     }
     &__menu-item-link {
-      font-size: 2rem;
+      font-size: 2.4rem;
       padding: 3.2rem 0;
       border-bottom: 4px solid transparent;
       &:hover,
