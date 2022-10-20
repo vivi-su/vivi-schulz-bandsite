@@ -417,17 +417,16 @@
   line-height: 1.25;
   font-weight: 700;
 }
-.comment__message-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.comment__message-user, .comment__message-date {
+  display: inline-block;
 }
 .comment__message-user, .comment__message-date, .comment__message-content {
   padding-bottom: 0.4rem;
 }
 .comment__message-date {
   color: #AFAFAF;
+  position: relative;
+  float: right;
 }
 
 @media only screen and (min-width: 768px) {
@@ -477,6 +476,11 @@
     width: 4.8rem;
     height: 4.8rem;
     margin-right: 1.6rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .comment {
+    width: 50vw;
   }
 }
 .footer {

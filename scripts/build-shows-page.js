@@ -1,8 +1,4 @@
-console.log('hello world')
-
-
-
-  const createBtn = (text, showsContent) => {
+ const createBtn = (text, showsContent) => {
     const btn = document.createElement("button");
     btn.innerText =text;
     showsContent.appendChild(btn);
