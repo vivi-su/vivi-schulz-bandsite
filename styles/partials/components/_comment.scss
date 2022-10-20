@@ -91,7 +91,6 @@
     overflow: hidden; 
     border-radius: 50%; 
 
-
      img{ 
         width: 100%; 
         width: 3.6rem; 
@@ -101,10 +100,26 @@
        
      }
    } 
-  
+
+  &--message{
+    margin-top:2.4rem;
+    margin-bottom:1.6rem;
+  }
+
+  h5{
+    font-size:1rem;
+  }
+
+  &__message{
+    background-color: yellow;
+  }
+
+  &__message-user, &__message-date, &__message-content{
+    padding-bottom:0.4rem;
+  }
+
 
 }
-
 
 @include mixins.mq-medium {
   .comment {
@@ -151,9 +166,11 @@
      }
    } 
   
-&__form{
+&__form, &__message{
     flex:8 1 0;
+    background-color: green;
 }
 }
 
 }
+
