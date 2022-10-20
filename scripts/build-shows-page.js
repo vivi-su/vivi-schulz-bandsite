@@ -2,19 +2,19 @@ console.log('hello world')
 
 
 
-//   const createBtn = (text,showsContent) => {
-//     const btn = document.createElement("button");
-//     btn.innerText = text;
-//     showsContent.appendChild(btn);
+  const createBtn = (showsContent) => {
+    const btn = document.createElement("button");
+    btn.innerText ='BUY TICKET';
+    showsContent.appendChild(btn);
 
-//     btn.addEventListener("click", () => {
-//       btn.style.backgroundColor = "red";
-//     });
+    btn.addEventListener("click", () => {
+      btn.style.backgroundColor = "red";
+    });
 
-//     return btn;
-//   };
+    return btn;
+  };
 
-  // createBtn('COMMENT');
+  //createBtn('COMMENT');
 
 
 
@@ -59,6 +59,7 @@ const renderShowsSet = (show, showsList) => {
   showsContent.appendChild(showsLocationDetail);
 
   showsList.appendChild(showsContent);
+  createBtn(showsContent);
 
 };;
 
