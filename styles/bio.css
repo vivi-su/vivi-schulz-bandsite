@@ -396,7 +396,6 @@
   padding-bottom: 0.4rem;
 }
 .comment__hr {
-  width: 90vw;
   border: 1px solid #E1E1E1;
 }
 .comment--message {
@@ -416,6 +415,7 @@
 }
 .comment__message {
   line-height: 1.25;
+  font-weight: 700;
 }
 .comment__message-title {
   display: flex;
@@ -431,13 +431,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .comment label {
+  .comment {
+    width: 70vw;
     font-size: 1.2rem;
   }
   .comment input,
 .comment textarea,
 .comment button {
-    font-size: 1.2rem;
     padding: 1.6rem;
     margin-bottom: 1.2rem;
   }
@@ -467,13 +467,16 @@
        object-fit: cover;
     flex: 1 1 0;
   }
+  .comment__form {
+    padding-bottom: 1rem;
+  }
   .comment__form, .comment__message {
     flex: 8 1 0;
   }
   .comment__message-image {
     width: 4.8rem;
     height: 4.8rem;
-    margin: 1.6rem 1.6rem 0 0;
+    margin-right: 1.6rem;
   }
 }
 .footer {
