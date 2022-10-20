@@ -2,9 +2,9 @@ console.log('hello world')
 
 
 
-  const createBtn = (showsContent) => {
+  const createBtn = (text, showsContent) => {
     const btn = document.createElement("button");
-    btn.innerText ='BUY TICKET';
+    btn.innerText =text;
     showsContent.appendChild(btn);
 
     btn.addEventListener("click", () => {
@@ -16,6 +16,10 @@ console.log('hello world')
 
   //createBtn('COMMENT');
 
+const createDivider = (showsContent) => {
+  const divider = document.createElement("hr");
+    showsContent.appendChild(divider);
+};
 
 
 const renderShowsSet = (show, showsList) => {
@@ -59,8 +63,8 @@ const renderShowsSet = (show, showsList) => {
   showsContent.appendChild(showsLocationDetail);
 
   showsList.appendChild(showsContent);
-  createBtn(showsContent);
-
+  createBtn('BUY TICKET', showsContent);
+  createDivider(showsContent);
 };;
 
 
