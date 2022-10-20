@@ -392,6 +392,19 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.comment--message {
+  margin-top: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.comment h5 {
+  font-size: 1rem;
+}
+.comment__message {
+  background-color: yellow;
+}
+.comment__message-user, .comment__message-date, .comment__message-content {
+  padding-bottom: 0.4rem;
+}
 
 @media only screen and (min-width: 768px) {
   .comment label {
@@ -430,8 +443,9 @@
        object-fit: cover;
     flex: 1 1 0;
   }
-  .comment__form {
+  .comment__form, .comment__message {
     flex: 8 1 0;
+    background-color: green;
   }
 }
 .footer {
