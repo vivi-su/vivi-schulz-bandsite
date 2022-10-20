@@ -133,8 +133,8 @@
     font-weight: 700;
    }
 
-  &__message-title{
-    @include mixins.flexed(row, space-between, center);
+  &__message-user, &__message-date{
+  display:inline-block;
   }
 
   &__message-user, &__message-date, &__message-content{
@@ -142,7 +142,9 @@
   }
 
   &__message-date{
-    color:$primary-silver;
+    color:$primary-silver; 
+    position: relative;
+    float:right;
   }
 
 
@@ -208,4 +210,11 @@
 }
 
 }
+
+@include mixins.mq-medium {
+.comment{
+  width:50vw;
+}
+}
+
 
