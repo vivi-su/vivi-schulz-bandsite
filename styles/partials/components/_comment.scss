@@ -73,7 +73,7 @@
     color: $primary-black;
   }
 
-  &__form-section {
+  &__section {
     @include mixins.flexed(row, space-between, flex-start);
    
   }
@@ -96,26 +96,52 @@
         width: 3.6rem; 
         height: 3.6rem; 
         object-fit: cover;
-   
        
      }
    } 
 
+  &__form{
+    padding-bottom:0.4rem;
+  }
+
+  &__hr{
+    width:90vw;
+    border:1px solid $secondary-mercury;
+  }
+
+
   &--message{
     margin-top:2.4rem;
     margin-bottom:1.6rem;
-  }
+    color:$primary-black;
+  } 
 
-  h5{
-    font-size:1rem;
-  }
+   &__message-wraper{
+    margin-right: 1.6rem;
+   }
 
-  &__message{
-    background-color: yellow;
+   &__message-image{
+      width:3.6rem; 
+      height:3.6rem;
+      background-color: $secondary-mercury;
+      border-radius:50%;
+      display: inline-block;
+   }
+
+   &__message{
+    line-height: 1.25;
+   }
+
+  &__message-title{
+    @include mixins.flexed(row, space-between, center);
   }
 
   &__message-user, &__message-date, &__message-content{
     padding-bottom:0.4rem;
+  }
+
+  &__message-date{
+    color:$primary-silver;
   }
 
 
@@ -135,17 +161,18 @@
      
         padding: 1.6rem;
         margin-bottom: 1.2rem;
-  }
+    }
 
 
     textarea {
       min-height: 4.8rem;
     }
 
-    &__title {
+  &__title {
       font-size: 3.6rem;
       padding: 4.8rem 3.6rem 3.6rem 0;
-    }
+  }
+
   &__empty{
     flex:1 1 0;
   }
@@ -166,10 +193,17 @@
      }
    } 
   
-&__form, &__message{
+  &__form,&__message{
     flex:8 1 0;
-    background-color: green;
-}
+  }
+
+  &__message-image{
+      width:4.8rem; 
+      height:4.8rem;
+      margin:1.6rem 1.6rem 0 0;
+
+   }
+
 }
 
 }
