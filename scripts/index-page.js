@@ -22,42 +22,64 @@ const userInput = [
 ];
 
 
-const renderInput = (userInput,commentMessage) =>{
+// const renderInput = (userInput,commentMessage) =>{
     
-    const commentMessageU = document.createElement('p');
-    commentMessageU.classList.add('comment__message-user');
-    commentMessageU.innerText = userInput.name;
+//     const commentMessageU = document.createElement('p');
+//     commentMessageU.classList.add('comment__message-user');
+//     commentMessageU.innerText = userInput.name;
     
-    const commentMessageD = document.createElement('p');
-    commentMessageD.classList.add('comment__message-date');
-    commentMessageD.innerText = userInput.date;
+//     const commentMessageD = document.createElement('p');
+//     commentMessageD.classList.add('comment__message-date');
+//     commentMessageD.innerText = userInput.date;
     
-    const commentMessageC = document.createElement('p');
-    commentMessageC.classList.add('comment__message-content');
-    commentMessageC.innerText = userInput.content;
+//     const commentMessageC = document.createElement('p');
+//     commentMessageC.classList.add('comment__message-content');
+//     commentMessageC.innerText = userInput.content;
     
-    commentMessage.appendChild(commentMessageU);
-    commentMessage.appendChild(commentMessageD);
-    commentMessage.appendChild(commentMessageC);
-};
+//     commentMessage.appendChild(commentMessageU);
+//     commentMessage.appendChild(commentMessageD);
+//     commentMessage.appendChild(commentMessageC);
+// };
 
 
 
 
-const renderArticle = (commentSection) =>{
-const commentMessage = document.createElement('section');
-commentMessage.classList.add('comment__message');
-commentSection.appendChild(commentMessage);
-for(let i =0; i< userInput.length; i++){
-    renderInput(userInput[i], commentMessage);
-}
-};
+// const renderMessage = (commentSection) =>{
+// const commentMessage = document.createElement('section');
+// commentMessage.classList.add('comment__message');
+// commentSection.appendChild(commentMessage);
+// for(let i =0; i< userInput.length; i++){
+//     renderInput(userInput[i], commentMessage);
+// }
+// };
+
+// const renderCallImage = (commentMessageWrapper)=>{
+//     const commentMessageImage = document.createElement('div');
+//     commentMessageImage.classList.add("comment__message-image");
+//     commentMessageWrapper.appendChild(commentMessageImage);
+// };
+
 
 const render = () =>{
-const commentSection = document.querySelector('.comment__section');
-commentSection.innerHTML = '';
-renderArticle(commentSection);
+const commentSection = document.getElementsByClassName(
+  "comment__section comment--section"
+);
+console.log(commentSection);
+// commentSection.innerHTML = '';
+
+// const commentEmpty = document.createElement('div');
+// commentEmpty.classList.add('comment__empty');
+
+// const commentMessageWrapper = document.createElement('div');
+// commentMessageWrapper.classList.add('comment__message-wraper');
+
+// commentSection.appendchild(commentEmpty);
+// commentSection.appendchild(commentMessageWrapper);
+
+// renderCallImage(commentMessageWrapper);
+
+// renderMessage(commentSection);
 };
 
-render();
 
+render();
