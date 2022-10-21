@@ -2,10 +2,7 @@
 @use "../colors" as *;
 @use "../mixins" as mixins;
 
-
-
-
-.comment {
+.form, .comment {
   width: 90vw;
   margin:0 auto;
   line-height:1.25;
@@ -139,7 +136,7 @@
 }
 
 @include mixins.mq-medium {
-  .comment {
+  .form, .comment {
     width:70vw;
     font-size: 1.2rem;
   
@@ -180,7 +177,7 @@
 }
 
 @include mixins.mq-large{
-.comment{
+.form, .comment{
   width:50vw;
 }
 }
