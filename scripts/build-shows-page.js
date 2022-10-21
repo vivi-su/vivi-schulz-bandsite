@@ -14,6 +14,7 @@
 
 const createDivider = (showsContent) => {
   const divider = document.createElement("hr");
+  divider.classList.add('shows__hr');
     showsContent.appendChild(divider);
 };
 
@@ -21,7 +22,7 @@ const createDivider = (showsContent) => {
 const renderShowsSet = (show, showsList) => {
   const showsContent = document.createElement("div");
   showsContent.classList.add("shows__content");
-  showsContent.setAttribute("id", show.id);
+
 
   //------------------show date-----------------
   const showsDate = document.createElement("p");

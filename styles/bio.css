@@ -1,3 +1,59 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir", Arial;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  margin: 0;
+  font-weight: 400;
+}
+
+label,
+input,
+textarea,
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+/* media query for mobile */
+/* media query for tablet */
+/* media query for desktop */
+/* Flex */
+/* hover-effect */
+/* logo */
+/* button */
 /* Regular */
 @font-face {
   font-family: "Avenir";
@@ -16,13 +72,61 @@
   src: url("../../assets/Fonts/AvenirNextLTPro-Bold.otf") format("opentype"), url("../../assets/Fonts/alternative/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
 }
-/* media query for mobile */
-/* media query for tablet */
-/* media query for desktop */
-/* Flex */
-/* hover-effect */
-/* logo */
-/* button */
+/* padding setting */
+.padding {
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .padding--medium {
+    padding-top: 4.8rem;
+    padding-bottom: 2.4rem;
+  }
+}
+/* font setting */
+.page__header {
+  font-size: 2.4rem;
+  line-height: 2;
+  font-weight: 700;
+}
+
+.font__section-header {
+  font-size: 2.4rem;
+  line-height: 2;
+  font-weight: 700;
+}
+
+.font__sub-header {
+  font-size: 1.4rem;
+  line-height: 1.375;
+  font-weight: 600;
+}
+
+.font__body {
+  font-size: 1.3rem;
+  line-height: 1.125;
+  font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+  .page__header--medium {
+    font-size: 6rem;
+    line-height: 2.75;
+    font-weight: 700;
+  }
+  .font__section-header--medium {
+    font-size: 3.6rem;
+    font-weight: 600;
+  }
+  .font__sub-header--medium {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .font__body--medium {
+    font-size: 1.4rem;
+  }
+}
 /* styles for header for mobile */
 .header {
   background-color: #323232;
@@ -312,7 +416,6 @@
   font-size: 1rem;
 }
 .form button, .comment button {
-  width: 100%;
   font-weight: 600;
   height: 4rem;
   background-color: #323232;
@@ -595,52 +698,4 @@
   .footer__content-wrap {
     padding-right: 7vw;
   }
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Avenir", Arial;
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-p,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-li {
-  margin: 0;
-  font-weight: 400;
-}
-
-label,
-input,
-textarea,
-button {
-  font-family: inherit;
-  color: inherit;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-a,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-li {
-  list-style: none;
 }/*# sourceMappingURL=bio.css.map */
