@@ -1,3 +1,4 @@
+@use "./partials/components/basic.scss";
 @use "./partials/components/header";
 @use "./partials/components/hero";
 @use "./partials/components/main-content";
@@ -5,50 +6,3 @@
 @use "./partials/components/comment";
 @use "./partials/components/footer";
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Avenir", Arial;
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-p,
-div,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-li {
-  margin: 0;
-  font-weight: 400;
-}
-
-label,
-input,
-textarea,
-button {
-  font-family: inherit;
-  color: inherit;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-a,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-li {
-  list-style: none;
-}
