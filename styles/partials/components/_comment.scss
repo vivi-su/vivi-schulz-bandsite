@@ -57,8 +57,8 @@
   }
 
   &__section {
-    @include mixins.flexed(row, center, flex-start);
-     margin-top:2.4rem;
+    @include mixins.flexed(row, flex-start, flex-start);
+    margin-top:2.4rem;
     margin-bottom:1.6rem;
     color:$primary-black;
   }
@@ -88,6 +88,7 @@
 
    &__message-wraper{
     margin-right: 1.6rem;
+   
    }
 
    &__message-image{
@@ -100,10 +101,12 @@
    &__message{
     line-height: 1.25;
     font-weight: 700;
+  
    }
 
   &__message-user, &__message-date{
   display:inline-block;
+ 
   }
 
   &__message-user, &__message-date, &__message-content{

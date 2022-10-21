@@ -79,4 +79,40 @@ for (let i = 0; i < userInput.length; i++) {
 };
 
 
+
+const form = document.querySelector('.form__form');
+
+form.addEventListener('submit', (event)=>{
+  event.preventDefault();
+  const nameVal = event.target.userName.value;
+  const commentVal = event.target.comment.value;
+  const commentDate = getDate();
+
+  if(nameVal !== '' && commentVal !== ''){
+    userInput.unshift({
+      name: nameVal,
+      date: commentDate,
+      content: commentVal,
+    });
+    render();
+    console.log(commentDate);
+    event.target.reset();
+  }else{
+    alert('Please type both Inputs');
+  }
+
+});
+
 render();
+
+
+function getDate(){
+
+  const d = new Date();
+  const month = d.getUTCMonth() + 1;
+  const day = d.getUTCDate();
+  const year = d.getUTCFullYear();
+
+  return month + "/" + day + "/" + year;
+
+}
