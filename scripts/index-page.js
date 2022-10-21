@@ -41,35 +41,36 @@ const renderInput = (userInput,commentMessage) =>{
     commentMessage.appendChild(commentMessageC);
 };
 
+const renderSection = (input, comment) =>{
+
+const commentSection = document.createElement("article");
+commentSection.classList.add("comment__section");
+comment.appendChild(commentSection);
+
+const commentMessageWraper = document.createElement("div");
+commentMessageWraper.classList.add("comment__message-wraper");
+commentSection.appendChild(commentMessageWraper);
+
+const commentMessageImage = document.createElement("div");
+commentMessageImage.classList.add("comment__message-image");
+commentMessageWraper.appendChild(commentMessageImage);
+
+const commentMessage = document.createElement("section");
+commentMessage.classList.add("comment__message");
+commentSection.appendChild(commentMessage);
+
+renderInput(input, commentMessage);
+
+}
+
 
 const render = () => {
 
 const comment = document.querySelector('.comment');
 comment.innerHTML = " ";
 
-const commentSection = document.createElement('article');
-commentSection.classList.add('comment__section');
-comment.appendChild(commentSection);
-
-
-const commentMessageWraper = document.createElement('div');
-commentMessageWraper.classList.add("comment__message-wraper");
-commentSection.appendChild(commentMessageWraper);
-
-
-const commentMessageImage = document.createElement('div');
-commentMessageImage.classList.add('comment__message-image');
-commentMessageWraper.appendChild(commentMessageImage);
-
-
-const commentMessage = document.createElement('section');
-commentMessage.classList.add('comment__message');
-commentSection.appendChild(commentMessage);
-
-
-
 for (let i = 0; i < userInput.length; i++) {
-  renderInput(userInput[i], commentMessage);
+  renderSection(userInput[i], comment);
 }
 
 };
