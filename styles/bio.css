@@ -336,6 +336,9 @@
   margin-bottom: 1.2rem;
   border-radius: 4px;
 }
+.form button, .comment button {
+  margin-bottom: 0;
+}
 .form input,
 .form textarea, .comment input,
 .comment textarea {
@@ -395,7 +398,6 @@
 }
 .form__form, .comment__form {
   width: 100%;
-  padding-bottom: 0.4rem;
   flex: 1 1 auto;
 }
 .form__hr, .comment__hr {
@@ -431,6 +433,9 @@
     width: 70vw;
     font-size: 1.2rem;
   }
+  .form label, .comment label {
+    margin-bottom: 0.8rem;
+  }
   .form input,
 .form textarea,
 .form button, .comment input,
@@ -438,6 +443,9 @@
 .comment button {
     padding: 1.6rem;
     margin-bottom: 1.2rem;
+  }
+  .form button, .comment button {
+    margin-bottom: 0;
   }
   .form textarea, .comment textarea {
     min-height: 4.8rem;
@@ -463,6 +471,7 @@
   }
 }
 .footer {
+  margin-top: 1.6rem;
   background-color: #323232;
   color: #FFFFFF;
   padding: 3.2rem 1.6rem 2.4rem 1.6rem;
@@ -536,6 +545,7 @@
   .footer {
     padding: 4.8rem 3.2rem;
     line-height: 1.25;
+    margin-top: 2.4rem;
   }
   .footer__logo {
     width: min(18vw, 15rem);

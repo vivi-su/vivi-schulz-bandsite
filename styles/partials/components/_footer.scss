@@ -5,6 +5,7 @@
 
 
 .footer {
+  margin-top: 1.6rem;
   background-color: $primary-black;
   color: $primary-white;
 
@@ -76,6 +77,7 @@
   .footer {
     padding: 4.8rem 3.2rem;
     line-height: 1.25;
+    margin-top:2.4rem;
 
     &__logo {
       width: min(18vw, 15rem);
@@ -120,6 +122,8 @@
 
 @include mixins.mq-large {
   .footer {
+   
+
     &__touch-title {
       font-size: 4.5rem;
     }
