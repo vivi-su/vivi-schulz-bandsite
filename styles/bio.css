@@ -22,6 +22,7 @@
 /* Flex */
 /* hover-effect */
 /* logo */
+/* button */
 /* styles for header for mobile */
 .header {
   background-color: #323232;
@@ -310,6 +311,21 @@
   line-height: 1.25;
   font-size: 1rem;
 }
+.form button, .comment button {
+  width: 100%;
+  font-weight: 600;
+  height: 4rem;
+  background-color: #323232;
+  color: #FFFFFF;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  border-radius: 4px;
+  transition: color 0.25s ease-in-out;
+}
+.form button:hover, .comment button:hover {
+  background-color: #000000;
+}
 .form input::-moz-placeholder, .comment input::-moz-placeholder {
   color: #323232;
 }
@@ -326,22 +342,13 @@
   font-weight: 600;
 }
 .form input,
-.form textarea,
-.form button, .comment input,
-.comment textarea,
-.comment button {
+.form textarea, .comment input,
+.comment textarea {
   width: 100%;
   padding: 1.2rem;
   outline: 0;
   margin-bottom: 1.2rem;
   border-radius: 4px;
-}
-.form button, .comment button {
-  margin-bottom: 0;
-}
-.form input,
-.form textarea, .comment input,
-.comment textarea {
   color: #323232;
   border: 1px solid #E1E1E1;
   background-color: #FAFAFA;
@@ -358,17 +365,6 @@
 }
 .form textarea, .comment textarea {
   min-height: 3.6rem;
-}
-.form button, .comment button {
-  font-weight: 600;
-  height: 4rem;
-  background-color: #323232;
-  color: #FFFFFF;
-  border: 0;
-  cursor: pointer;
-}
-.form button:hover, .comment button:hover {
-  background-color: #000000;
 }
 .form__title, .comment__title {
   font-size: 2.4rem;
@@ -433,19 +429,21 @@
     width: 70vw;
     font-size: 1.2rem;
   }
+  .form button, .comment button {
+    padding: 0 3.2rem;
+    width: 15rem;
+    float: right;
+  }
   .form label, .comment label {
     margin-bottom: 0.8rem;
   }
   .form input,
 .form textarea,
-.form button, .comment input,
+.form padding, .comment input,
 .comment textarea,
-.comment button {
+.comment padding {
     padding: 1.6rem;
     margin-bottom: 1.2rem;
-  }
-  .form button, .comment button {
-    margin-bottom: 0;
   }
   .form textarea, .comment textarea {
     min-height: 4.8rem;
@@ -467,7 +465,7 @@
 }
 @media only screen and (min-width: 1280px) {
   .form, .comment {
-    width: 50vw;
+    width: 40vw;
   }
 }
 .footer {
