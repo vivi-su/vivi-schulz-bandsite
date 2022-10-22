@@ -91,7 +91,7 @@ li {
   font-weight: 700;
 }
 
-.font__section-header, .hero__name-queen {
+.font__section-header {
   font-size: 2.4rem;
   line-height: 2;
   font-weight: 700;
@@ -115,7 +115,7 @@ li {
     line-height: 2.75;
     font-weight: 700;
   }
-  .font__section-header--medium {
+  .font__section-header--medium, .hero__name-queen {
     font-size: 3.6rem;
     font-weight: 600;
   }
@@ -123,7 +123,7 @@ li {
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
-  .font__body--medium {
+  .font__body--medium, .hero__name-album {
     font-size: 1.4rem;
   }
 }
@@ -253,33 +253,87 @@ li {
   background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5));
 }
 .hero--shows {
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  background-image: url(../../../assets/Images/hero-shows.jpg);
+  background-position: 20% 20%;
+  height: 45vh;
+  padding: 1.6rem;
+  display: block;
+}
+.hero__shows-ifwrapper {
+  position: relative;
 }
 .hero__title--shows {
+  padding-left: 0;
   text-align: left;
 }
 .hero__name-album {
   font-weight: 400;
-  line-height: 1.8;
+  padding-bottom: 1.2rem;
 }
 .hero__name-queen {
   font-weight: 400;
   line-height: 1.2;
+}
+.hero__x--ht {
+  display: none;
 }
 
 /* styles for hero on tablet device */
 @media only screen and (min-width: 768px) {
   .hero {
     height: 60vh;
+    /* styling for hero shows */
   }
   .hero__title {
     font-size: 6rem;
     padding: 4.8rem;
     letter-spacing: 3px;
+  }
+  .hero--shows {
+    height: 50vh;
+  }
+  .hero__shows-ifwrapper {
+    max-width: 40vw;
+    padding-left: 4.8rem;
+  }
+  .hero__name-album {
+    font-weight: 600;
+  }
+  .hero__name-queen {
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .hero {
+    /* styles for shows hero */
+  }
+  .hero--shows {
+    padding: 13rem;
+    height: 60vh;
+  }
+  .hero__shows-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 4.8rem;
+  }
+  .hero__title--shows {
+    flex: 1 1 1;
+  }
+  .hero__shows-ifwrapper {
+    flex: 1 1 auto;
+    align-self: center;
+  }
+  .hero__shows-ifwrapper iframe {
+    height: 120px;
+    max-width: 40vw;
+  }
+  .hero__x--hm {
+    display: none;
+  }
+  .hero__x--ht {
+    display: inline-block;
   }
 }
 .main {
