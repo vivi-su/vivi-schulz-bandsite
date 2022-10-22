@@ -10,9 +10,10 @@
 
   button{
         @include mixins.button;
+        width:100%;
   }
 
-  input{
+  input, textarea{
     &::placeholder{
     color:$primary-black;
   }
@@ -38,9 +39,6 @@
     background-color: $secondary-alabaster;
     &:active {
       border: 1px solid $primary-black;
-    }
-    &:invalid {
-      border: 1px solid #d22d2d;
     }
   }
 

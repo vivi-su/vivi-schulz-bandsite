@@ -11,7 +11,7 @@ let createBtn = (text, showsContent) => {
         btn.removeEventListener('click', buttonHandler);
       }else{
         called=true;
-        btn.classList.toggle("shows__btn--strike-through");
+        btn.classList.toggle("shows__btn--active");
       }
        return btn;
     }
