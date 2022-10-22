@@ -538,6 +538,9 @@ li {
 .form textarea, .comment textarea {
   min-height: 3.6rem;
 }
+.form--highlight, .comment--highlight {
+  box-shadow: 0 0 10px #E1E1E1;
+}
 .form__title, .comment__title {
   font-size: 2.4rem;
   font-weight: 600;
