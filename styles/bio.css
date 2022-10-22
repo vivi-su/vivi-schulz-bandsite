@@ -514,6 +514,7 @@ li {
 .form__message, .comment__message {
   line-height: 1.25;
   font-weight: 700;
+  flex: 8 1 0;
 }
 .form__message-user, .form__message-date, .comment__message-user, .comment__message-date {
   display: inline-block;

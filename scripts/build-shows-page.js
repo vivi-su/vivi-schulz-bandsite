@@ -1,16 +1,21 @@
- const createBtn = (text, showsContent) => {
+let createBtn = (text, showsContent) => {
     const btn = document.createElement("button");
+    btn.classList.add("shows__btn");
     btn.innerText =text;
     showsContent.appendChild(btn);
+    btn.addEventListener('click', buttonHandler);  
 
-    btn.addEventListener("click", () => {
-      btn.style.backgroundColor = "red";
-    });
-
-    return btn;
+     function buttonHandler(){
+     let called = false;
+      if(called){
+        btn.removeEventListener('click', buttonHandler);
+      }else{
+        called=true;
+        btn.classList.toggle("shows__btn--strike-through");
+      }
+       return btn;
+    }
   };
-
-  //createBtn('COMMENT');
 
 const createDivider = (showsContent) => {
   const divider = document.createElement("hr");

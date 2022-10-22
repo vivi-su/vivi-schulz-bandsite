@@ -70,7 +70,7 @@
     height:3.6rem;
     border-radius: 50%;
     background-size: cover;
-     margin-top: 1.6rem;
+    margin-top: 1.6rem;
     margin-right: 1.6rem;
     flex:0 0 auto;
      
@@ -101,7 +101,7 @@
    &__message{
     line-height: 1.25;
     font-weight: 700;
-  
+    flex:8 1 0;
    }
 
   &__message-user, &__message-date{
