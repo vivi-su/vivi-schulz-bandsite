@@ -266,7 +266,7 @@ li {
 .shows {
   margin: 1.6rem;
 }
-.shows button {
+.shows__btn {
   width: 100%;
   font-weight: 600;
   height: 4rem;
@@ -278,8 +278,12 @@ li {
   border-radius: 4px;
   transition: color 0.25s ease-in-out;
 }
-.shows button:hover {
+.shows__btn:hover {
   background-color: #000000;
+}
+.shows__btn--strike-through {
+  transition-duration: 0.2s;
+  background-color: black;
 }
 .shows__hr {
   border: 1px solid #E1E1E1;
@@ -299,7 +303,7 @@ li {
   .shows {
     padding: 0 2.4rem 2.4rem 2.4rem;
   }
-  .shows button {
+  .shows__btn {
     max-width: 15rem;
     flex: 1 1 0;
   }
@@ -323,6 +327,26 @@ li {
     position: absolute;
     top: 30px;
     width: 100%;
+  }
+}
+@-webkit-keyframes strike {
+  from {
+    -webkit-text-decoration-color: transparent;
+            text-decoration-color: transparent;
+  }
+  to {
+    -webkit-text-decoration-color: auto;
+            text-decoration-color: auto;
+  }
+}
+@keyframes strike {
+  from {
+    -webkit-text-decoration-color: transparent;
+            text-decoration-color: transparent;
+  }
+  to {
+    -webkit-text-decoration-color: auto;
+            text-decoration-color: auto;
   }
 }
 .footer {

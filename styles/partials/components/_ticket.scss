@@ -5,9 +5,15 @@
 
 .shows{
     margin: 1.6rem;
-    button{
+    &__btn{
         width:100%;
         @include mixins.button;
+
+        &--strike-through{
+            transition-duration: 0.2s;
+            background-color: black;
+
+        }
     }
 
     &__hr{
@@ -44,7 +50,7 @@
 .shows{
     padding:0 2.4rem 2.4rem 2.4rem;
     
-    button{
+    &__btn{
         max-width:15rem;
         flex:1 1 0;
     }
@@ -84,4 +90,14 @@ width:100%;
 
 }
 
+}
+
+
+@keyframes strike{
+    from{
+        text-decoration-color:transparent;
+    }
+    to{
+        text-decoration-color:auto;
+    }
 }

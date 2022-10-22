@@ -67,7 +67,7 @@ comment.appendChild(createHr);
 }
 
 
-const render = () => {
+const displayComment = () => {
 
 const comment = document.querySelector('.comment');
 comment.innerHTML = " ";
@@ -94,7 +94,7 @@ form.addEventListener('submit', (event)=>{
       date: commentDate,
       content: commentVal,
     });
-    render();
+    displayComment();
     console.log(commentDate);
     event.target.reset();
   }else{
@@ -103,7 +103,7 @@ form.addEventListener('submit', (event)=>{
 
 });
 
-render();
+displayComment();
 
 
 function getDate(){
