@@ -5,14 +5,22 @@
 
 .shows{
     margin: 1.6rem;
+    
+    &__title-modify-wrapper{
+        display: none;
+    }
+
     &__btn{
         width:100%;
         @include mixins.button;
 
-        &--strike-through{
+        &--active{
             transition-duration: 0.2s;
             background-color: black;
+        }
 
+        &--modify{
+            visibility:hidden;
         }
     }
 
@@ -49,6 +57,20 @@
 @include mixins.mq-medium {
 .shows{
     padding:0 2.4rem 2.4rem 2.4rem;
+
+     &__title-modify-wrapper{
+        display: block;
+        @include mixins.flexed(row,space-around,flex-start);
+    }
+
+    &__title-modify{
+        @extend.font__body--medium;
+        text-align:left;
+        flex:1 1 0;
+        color:$primary-silver;
+        font-weight: 600;
+
+    }
     
     &__btn{
         max-width:15rem;
@@ -92,12 +114,3 @@ width:100%;
 
 }
 
-
-@keyframes strike{
-    from{
-        text-decoration-color:transparent;
-    }
-    to{
-        text-decoration-color:auto;
-    }
-}

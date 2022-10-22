@@ -8,8 +8,60 @@
     <title>Shows</title>
 </head>
 <body>
+     <!-- Header Component -->
+    <header class="header">
+      <a href="../index.html">
+        <svg class="header__logo">
+          <use href="../assets/sprite.svg#Logo-bandsite " alt="Bandsite"></use>
+        </svg>
+      </a>
+
+      <nav>
+        <ul class="header__menu">
+          <li class="header__menu-item header__menu-item--default">
+            <a class="header__menu-item-link" href="../index.html">Biography</a>
+          </li>
+          <li class="header__menu-item header__menu-item">
+            <a class="header__menu-item-link header__menu-item-link" href="../pages/shows.html"
+              >Shows</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero hero--shows">
+      <div class="hero__shows-wrapper">
+        <div class="hero__title hero__title--shows">
+         
+            <h3 class="hero__name-album">Beautiful Beasts Album</h3>
+            <h2 class="hero__name-queen">Queen of Yellow x <br>For the strings</h2>
+        </div>
+
+
+      <div class="hero__shows-iwrapper"><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/751415785&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/jason-mcniff" title="Jason McNiff" target="_blank" style="color: #cccccc; text-decoration: none;">Jason McNiff</a> · <a href="https://soundcloud.com/jason-mcniff/game-over-live-at-the-green-note" title="Game Over live at the Green Note" target="_blank" style="color: #cccccc; text-decoration: none;">Game Over live at the Green Note</a></div></div>
+
+
+
+
+
+
+
+
+
+    </div>
+    </section>
+
     <main class="shows">
         <h2 class="shows__title">Shows</h2>
+        <div class="shows__title-modify-wrapper">
+            <p class="shows__title-modify">DATE</p>
+            <p class="shows__title-modify">VENUE</p>
+            <p class="shows__title-modify">LOCATION</p>
+            <button class="shows__btn shows__btn--modify"></button> 
+        </div>
+
         <section class="shows__list">
             <!-- <div 
             <div class="shows__content">
@@ -26,6 +78,104 @@
             <button class="shows__btn"></button> 
             <hr class="shows__hr">  -->
         </section>
+
+           <!-- footer -->
+    <footer class="footer">
+      <div class="footer__wraper">
+        <section class="footer__touch">
+          <h5 class="footer__touch-title">Get in Touch</h5>
+          <div class="footer__icon-wrap">
+            <svg class="footer__icon">
+              <use
+                xlink:href="../assets/sprite.svg#Icon-instagram"
+                alt="Icon-instagram"
+              ></use>
+            </svg>
+            <svg class="footer__icon">
+              <use
+                href="../assets/sprite.svg#Icon-facebook "
+                alt="Icon-facebook"
+              ></use>
+            </svg>
+            <svg class="footer__icon">
+              <use
+                href="../assets/sprite.svg#Icon-twitter "
+                alt="Icon-twitter"
+              ></use>
+            </svg>
+          </div>
+          <a href="../index.html">
+            <svg class="footer__logo footer__logo--md">
+              <use href="../assets/sprite.svg#Logo-bandsite "></use>
+            </svg>
+          </a>
+        </section>
+        <section class="footer__content">
+          <section class="footer__content-wrap">
+            <div
+              class="footer__content-inner footer__content-inner--styling footer__content-inner--padding"
+            >
+              <h6>Cam Adams</h6>
+              <h6>The Bees Knees Management</h6>
+            </div>
+            <div class="footer__content-inner">
+              <p>503 Broadway Penthouse,</p>
+              <p class="footer__content-inner--padding">
+                New York, NY 10012, USA
+              </p>
+              <a href="mailto:info@thebeesknees.com?subject=Contact Us">
+                <p class="footer__content-inner--padding">info@thebeesknees.com</p>
+              </a>
+            </div>
+          </section>
+          <section class="footer__content-wrap">
+            <div
+              class="footer__content-inner footer__content-inner--styling footer__content-inner--padding"
+            >
+              <h6>Pearl Gregg</h6>
+              <h6>Limitless Artist Group</h6>
+            </div>
+            <div class="footer__content-inner">
+              <p>Booking Agent for</p>
+              <p class="footer__content-inner--padding">
+                US / South America / Japan
+              </p>
+              <a href="mailto:pearl.gregg@limitlessag.com?subject=Contact Us">
+                <p class="footer__content-inner--padding">
+                  pearl.gregg@limitlessag.com
+                </p>
+              </a>
+            </div>
+          </section>
+          <section class="footer__content-wrap">
+            <div
+              class="footer__content-inner footer__content-inner--styling footer__content-inner--padding"
+            >
+              <h6>Carson Whyte</h6>
+              <h6>ARCH Entertainment</h6>
+            </div>
+            <div class="footer__content-inner">
+              <p>Booking Agent for</p>
+              <p class="footer__content-inner--padding">UK / EU / AU</p>
+              <a href="mailto:cwhyte@archentertainment.com?Contact Us">
+                <p>cwhyte@archentertainment.com</p>
+              </a>
+            </div>
+          </section>
+        </section>
+
+        <a href="../index.html">
+          <svg class="footer__logo footer__logo--sm">
+            <use href="../assets/sprite.svg#Logo-bandsite " alt="Bandsite"></use>
+          </svg>
+        </a>
+
+        <p class="footer__copyright">
+          Copyright The Bees Knees © 2021 All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
 
     </main>
     <script src="../scripts/shows-data.js"></script>
