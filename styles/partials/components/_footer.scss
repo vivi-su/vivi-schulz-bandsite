@@ -6,12 +6,12 @@
 
 .footer {
   margin-top: 1.6rem;
-  background-color: $primary-black;
-  color: $primary-white;
+  background-color: $color-primary;
+  color:$color-primary-ondark;
 
-  padding: 3.2rem 1.6rem 2.4rem 1.6rem;
-  line-height: 1.125;
-
+padding: 3.2rem 1.6rem 2.4rem 1.6rem;
+  line-height: 1.2;
+  width:100vw;
   p {
     font-size: 1.3rem;
   }
@@ -37,7 +37,7 @@
     max-height: 2.4rem;
     margin-right: 2.4rem;
     cursor: pointer; 
-    @include mixins.hover-effect($primary-silver);
+    @include mixins.hover-effect($color-secondary);
   }
   
   &__icon-wrap {
@@ -47,9 +47,9 @@
 
   &__content {
     a {
-      color: $primary-white;
+      color: $color-primary-ondark;
       cursor: pointer;
-      @include mixins.hover-effect($primary-silver);
+      @include mixins.hover-effect($color-secondary);
     }
     padding-bottom: 2.4rem;
   }
@@ -65,7 +65,7 @@
 
   &__logo {
     @include mixins.logo;
-    @include mixins.hover-effect($primary-silver);
+    @include mixins.hover-effect($color-secondary);
   }
 
   &__logo--md {
@@ -75,8 +75,8 @@
 
 @include mixins.mq-medium {
   .footer {
-    padding: 4.8rem 3.2rem;
-    line-height: 1.25;
+    padding: 4.8rem 4.8rem;
+    line-height: 1.4;
     margin-top:2.4rem;
 
     &__logo {
@@ -90,7 +90,7 @@
     &__logo--md {
       display: block;
       cursor: pointer;
-      @include mixins.hover-effect($primary-silver);
+      @include mixins.hover-effect($color-secondary);
     }
     
 
@@ -122,7 +122,13 @@
 
 @include mixins.mq-large {
   .footer {
-   
+   padding-left:8rem;
+   padding-right:8rem;
+
+   &__logo--md {
+    position:relative;
+   left:-10px;
+  }
 
     &__touch-title {
       font-size: 4.5rem;

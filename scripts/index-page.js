@@ -78,7 +78,7 @@ const form = document.querySelector('.form__form');
 form.addEventListener('submit', (event)=>{
   event.preventDefault();
   const nameVal = event.target.userName.value;
-  const commentVal = event.target.comment.value;
+  const commentVal = event.target.textArea.value;
   const commentDate = getDate();
 
   if(nameVal !== '' && commentVal !== ''){

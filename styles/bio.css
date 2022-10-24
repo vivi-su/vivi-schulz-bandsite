@@ -255,7 +255,7 @@ li {
 .hero--shows {
   background-image: url(../../../assets/Images/hero-shows.jpg);
   background-position: 20% 20%;
-  height: 45vh;
+  height: 45rem;
   padding: 1.6rem;
   display: block;
 }
@@ -290,7 +290,7 @@ li {
     letter-spacing: 3px;
   }
   .hero--shows {
-    height: 50vh;
+    height: 50rem;
   }
   .hero__shows-ifwrapper {
     max-width: 40vw;
@@ -309,7 +309,7 @@ li {
   }
   .hero--shows {
     padding: 13rem;
-    height: 60vh;
+    height: 55rem;
   }
   .hero__shows-wrapper {
     display: flex;
@@ -518,8 +518,8 @@ li {
   margin-bottom: 0.4rem;
   font-weight: 600;
 }
-.form input,
-.form textarea, .comment input,
+.form input[type=text],
+.form textarea, .comment input[type=text],
 .comment textarea {
   width: 100%;
   padding: 1.2rem;
@@ -530,9 +530,9 @@ li {
   border: 1px solid #E1E1E1;
   background-color: #FAFAFA;
 }
-.form input:active,
-.form textarea:active, .comment input:active,
-.comment textarea:active {
+.form input[type=text]:focus,
+.form textarea:focus, .comment input[type=text]:focus,
+.comment textarea:focus {
   border: 1px solid #323232;
 }
 .form textarea, .comment textarea {
@@ -554,7 +554,6 @@ li {
   align-items: flex-start;
   margin-top: 2.4rem;
   margin-bottom: 1.6rem;
-  color: #323232;
 }
 .form__form-image, .comment__form-image {
   background-image: url(../../../assets/Images/Mohan-muruge.jpg);
@@ -588,6 +587,9 @@ li {
   font-weight: 700;
   flex: 8 1 0;
 }
+.form__message-user, .comment__message-user {
+  font-weight: 600;
+}
 .form__message-user, .form__message-date, .comment__message-user, .comment__message-date {
   display: inline-block;
 }
@@ -598,6 +600,9 @@ li {
   color: #AFAFAF;
   position: relative;
   float: right;
+}
+.form__message-content, .comment__message-content {
+  color: #000000;
 }
 
 @media only screen and (min-width: 768px) {
@@ -613,11 +618,9 @@ li {
   .form label, .comment label {
     margin-bottom: 0.8rem;
   }
-  .form input,
-.form textarea,
-.form padding, .comment input,
-.comment textarea,
-.comment padding {
+  .form input[type=text],
+.form textarea, .comment input[type=text],
+.comment textarea {
     padding: 1.6rem;
     margin-bottom: 1.2rem;
   }
@@ -649,7 +652,8 @@ li {
   background-color: #323232;
   color: #FFFFFF;
   padding: 3.2rem 1.6rem 2.4rem 1.6rem;
-  line-height: 1.125;
+  line-height: 1.2;
+  width: 100vw;
 }
 .footer p {
   font-size: 1.3rem;
@@ -717,8 +721,8 @@ li {
 
 @media only screen and (min-width: 768px) {
   .footer {
-    padding: 4.8rem 3.2rem;
-    line-height: 1.25;
+    padding: 4.8rem 4.8rem;
+    line-height: 1.4;
     margin-top: 2.4rem;
   }
   .footer__logo {
@@ -762,6 +766,14 @@ li {
   }
 }
 @media only screen and (min-width: 1280px) {
+  .footer {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  .footer__logo--md {
+    position: relative;
+    left: -10px;
+  }
   .footer__touch-title {
     font-size: 4.5rem;
   }

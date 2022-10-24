@@ -15,30 +15,30 @@
 
   input, textarea{
     &::placeholder{
-    color:$primary-black;
+    color:$color-primary;
   }
 
   }
   
   label {
     display: block;
-    color: $primary-silver;
+    color: $color-secondary;
     margin-bottom: 0.4rem;
     font-weight: 600;
   }
 
-  input,
+  input[type="text"],
   textarea{
     width: 100%;
     padding: 1.2rem;
     outline: 0;
     margin-bottom: 1.2rem;
     border-radius: 4px;
-    color: $primary-black;
-    border: 1px solid $secondary-mercury;
-    background-color: $secondary-alabaster;
-    &:active {
-      border: 1px solid $primary-black;
+    color: $color-primary;
+    border: 1px solid $color-outline;
+    background-color: $color-alternative;
+    &:focus{
+      border: 1px solid $color-primary;
     }
   }
 
@@ -47,7 +47,7 @@
   }
 
   &--highlight{
-    box-shadow: 0 0 10px $secondary-mercury;
+    box-shadow: 0 0 10px $color-outline;
   }
 
   
@@ -55,14 +55,14 @@
     font-size: 2.4rem;
     font-weight: 600;
     padding: 2.4rem 1.6rem 1.6rem 0;
-    color: $primary-black;
+    color: $color-primary;
   }
 
   &__section {
     @include mixins.flexed(row, flex-start, flex-start);
     margin-top:2.4rem;
     margin-bottom:1.6rem;
-    color:$primary-black;
+    
   }
  
   &__form-image { 
@@ -85,7 +85,7 @@
   }
 
   &__hr{
-    border:1px solid $secondary-mercury;
+    border:1px solid $color-outline;
   }
 
    &__message-wraper{
@@ -96,7 +96,7 @@
    &__message-image{
       width:3.6rem; 
       height:3.6rem;
-      background-color: $secondary-mercury;
+      background-color: $color-outline;
       border-radius:50%;
    }
 
@@ -104,6 +104,10 @@
     line-height: 1.25;
     font-weight: 700;
     flex:8 1 0;
+   }
+
+   &__message-user{
+    font-weight:600;
    }
 
   &__message-user, &__message-date{
@@ -116,9 +120,13 @@
   }
 
   &__message-date{
-    color:$primary-silver; 
+    color:$color-secondary; 
     position: relative;
     float:right;
+  }
+
+  &__message-content{
+    color:$color-hover-state;
   }
 
 
@@ -139,9 +147,8 @@
       margin-bottom:0.8rem;
     }
     
-    input,
-    textarea,
-    padding{
+    input[type="text"],
+    textarea{
         padding: 1.6rem;
         margin-bottom: 1.2rem;
     }

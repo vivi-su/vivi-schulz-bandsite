@@ -1,10 +1,9 @@
 @use "../fonts" as *;
 @use "../colors" as *;
-// @use "../grid" as *;
 @use "../mixins" as mixins;
 
 .main {
-  color: $primary-black;
+  color: $color-primary;
 
 
   &__musician {
@@ -32,8 +31,7 @@
   }
 
   &__bees {
-    // @extend .grid;
-    color: $secondary-darkBlack;
+    color: $color-hover-state;
     line-height: 1.125;
     padding: 2.4rem 1.6rem;
   }
@@ -44,8 +42,6 @@
   }
 
   &__bees-content {
-    // @extend .grid;
-    // @extend .grid--1x2;
     font-size: 1.3rem;
     
   }
