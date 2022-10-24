@@ -1,0 +1,116 @@
+@use "../fonts" as *;
+@use "../colors" as *;
+@use "../mixins" as mixins;
+
+
+.shows{
+    margin: 1.6rem;
+    
+    &__title-modify-wrapper{
+        display: none;
+    }
+
+    &__btn{
+        width:100%;
+        @include mixins.button;
+
+        &--active{
+            transition-duration: 0.2s;
+            background-color: $color-hover-state;
+        }
+
+        &--modify{
+            visibility:hidden;
+        }
+    }
+
+    &__hr{
+    border:1px solid $color-outline;
+    margin-top: 2.4rem;
+    margin-bottom:1.6rem;
+    }
+    
+    &__title{
+        @extend.font__section-header;
+        @extend.padding;
+    }
+
+    &__date,
+    &__venue,
+    &__location{
+        @extend.font__body;
+        padding-bottom: 0.6rem;
+        color:$color-secondary;
+    }
+
+
+    &__dateDetail,
+    &__venueDetail,
+    &__locationDetail{
+       @extend.font__sub-header;
+       padding-bottom: 1.2rem;
+       color:$color-primary;
+    }
+}
+
+
+@include mixins.mq-medium {
+.shows{
+    padding:0 2.4rem 2.4rem 2.4rem;
+
+     &__title-modify-wrapper{
+        display: block;
+        @include mixins.flexed(row,space-around,flex-start);
+    }
+
+    &__title-modify{
+        @extend.font__body--medium;
+        text-align:left;
+        flex:1 1 0;
+        color:$color-secondary;
+        font-weight: 600;
+
+    }
+    
+    &__btn{
+        max-width:15rem;
+        flex:1 1 0;
+    }
+
+    &__content{
+        @include mixins.flexed(row,space-around,flex-end);
+        position:relative;
+        padding-bottom: 3.2rem;
+    }    
+
+    &__title{
+        @extend.font__section-header--medium;
+        @extend.padding--medium;
+    }
+
+    &__date,
+    &__venue,
+    &__location{
+       
+        display: none;
+    }
+
+    &__dateDetail,
+    &__venueDetail,
+    &__locationDetail{
+       @extend.font__body--medium;
+       padding-bottom: 1.2rem;
+       color:$color-primary;
+       flex:1 1 0;
+    }
+
+    &__hr{
+position:absolute;
+top:30px;
+width:100%;
+    }
+
+}
+
+}
+

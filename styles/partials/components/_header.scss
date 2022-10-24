@@ -4,8 +4,8 @@
 
 /* styles for header for mobile */
 .header {
-  background-color: $primary-black;
-  font-size: 2rem;
+  background-color: $color-primary;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -14,12 +14,8 @@
   width: 100%;
 
   &__logo {
-    width:100%;
-    max-width:15rem;
-    height: 8rem;
-    cursor: pointer;
-     color: $primary-white;
-    @include mixins.hover-effect($secondary-mercury);
+    @include mixins.logo;
+    @include mixins.hover-effect($color-secondary);
 
   }
 
@@ -32,7 +28,7 @@
   &__menu-item {
     padding-bottom:1.3rem;
     text-align: center;
-    color:$secondary-mercury;
+    color:$color-outline;
     flex: 1 1 0;
     border-bottom: 4px solid transparent;
     transition: border 0.2s ease-in-out;
@@ -40,12 +36,12 @@
     &:hover,
     &:active {
       font-weight: 600;
-      border-bottom: 4px solid $primary-white;
+      border-bottom: 4px solid $color-primary-ondark;
     }
   }
 
   &__menu-item-link {
-    color: $primary-white;  
+    color: $color-primary-ondark;  
   }
 }
 /* styles for header on tablet device */
@@ -56,10 +52,7 @@
 
     
     &__logo {
-       color: $primary-white;
       padding-left:4.8rem;
-      width:30rem;
-      box-sizing: content-box;
       @include mixins.flexed(column, center, center);
       
     }
@@ -79,12 +72,12 @@
       }
     }
     &__menu-item-link {
-      font-size: 2rem;
+      font-size: 2.4rem;
       padding: 3.2rem 0;
       border-bottom: 4px solid transparent;
       &:hover,
       &:active {
-        border-bottom: 4px solid $primary-white;
+        border-bottom: 4px solid $color-primary-ondark;
       }
     }
   }

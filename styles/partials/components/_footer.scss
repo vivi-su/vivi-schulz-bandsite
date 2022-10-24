@@ -5,18 +5,19 @@
 
 
 .footer {
-  background-color: $primary-black;
-  color: $primary-white;
+  margin-top: 1.6rem;
+  background-color: $color-primary;
+  color:$color-primary-ondark;
 
-  padding: 3.2rem 1.6rem 2.4rem 1.6rem;
-  line-height: 1.4;
-
+padding: 3.2rem 1.6rem 2.4rem 1.6rem;
+  line-height: 1.2;
+  width:100vw;
   p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
   h6 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 600;
   }
 
@@ -26,53 +27,45 @@
   }
 
   &__touch-title {
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     font-weight: 600;
   }
 
   &__icon {
     width: 100%;
-    max-width: 3rem;
-    max-height: 3rem;
+    max-width: 2.4rem;
+    max-height: 2.4rem;
     margin-right: 2.4rem;
     cursor: pointer; 
-    @include mixins.hover-effect($primary-silver);
+    @include mixins.hover-effect($color-secondary);
   }
   
   &__icon-wrap {
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
   }
 
   &__content {
     a {
-      color: $primary-white;
+      color: $color-primary-ondark;
       cursor: pointer;
-      @include mixins.hover-effect($primary-silver);
+      @include mixins.hover-effect($color-secondary);
     }
-  }
-
-  &__content-wrap {
     padding-bottom: 2.4rem;
   }
 
   &__content--styling {
-    padding-bottom: 2.4rem;
+    padding-bottom: 1.6rem;
   }
 
   &__content-inner--padding {
-    padding-bottom: 2.4rem;
+    padding-bottom: 1.6rem;
   }
 
+
   &__logo {
-    width: 100%;
-    max-width: 15rem;
-    height:5rem;
-    padding-top:2.4rem;  
-    padding-bottom:1.6rem;
-    box-sizing: content-box;
-    color: $primary-white;
-    @include mixins.hover-effect($primary-silver);
+    @include mixins.logo;
+    @include mixins.hover-effect($color-secondary);
   }
 
   &__logo--md {
@@ -82,8 +75,9 @@
 
 @include mixins.mq-medium {
   .footer {
-    padding: 4.8rem 3.2rem;
-    line-height: 1.25;
+    padding: 4.8rem 4.8rem;
+    line-height: 1.4;
+    margin-top:2.4rem;
 
     &__logo {
       width: min(18vw, 15rem);
@@ -96,7 +90,7 @@
     &__logo--md {
       display: block;
       cursor: pointer;
-      @include mixins.hover-effect($primary-silver);
+      @include mixins.hover-effect($color-secondary);
     }
     
 
@@ -128,6 +122,14 @@
 
 @include mixins.mq-large {
   .footer {
+   padding-left:8rem;
+   padding-right:8rem;
+
+   &__logo--md {
+    position:relative;
+   left:-10px;
+  }
+
     &__touch-title {
       font-size: 4.5rem;
     }
