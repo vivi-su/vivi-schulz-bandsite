@@ -2,88 +2,88 @@
 
 /* Regular */
 @font-face {
-    font-family: "Avenir";
-    src: url("../../assets/Fonts/AvenirNextLTPro-Regular.otf")
-    format("opentype"), url("../../assets/Fonts/alternative/AvenirNextLTPro.ttf") format("truetype");
-    font-weight: 400;
-
+  font-family: "Avenir";
+  src: url("../../assets/Fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+    url("../../assets/Fonts/alternative/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
 }
 
 /* Demi*/
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/Fonts/AvenirNextLTPro-Demi.otf")
-    format("opentype"), url("../../assets/Fonts/alternative/AvenirNextLTProDemi.ttf") format("truetype");
+  src: url("../../assets/Fonts/AvenirNextLTPro-Demi.otf") format("opentype"),
+    url("../../assets/Fonts/alternative/AvenirNextLTProDemi.ttf")
+      format("truetype");
   font-weight: 600;
-
 }
 
 /* Bold */
 @font-face {
   font-family: "Avenir";
-  src: url("../../assets/Fonts/AvenirNextLTPro-Bold.otf")
-    format("opentype"), url("../../assets/Fonts/alternative/AvenirNextLTProBold.ttf") format("truetype");
+  src: url("../../assets/Fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+    url("../../assets/Fonts/alternative/AvenirNextLTProBold.ttf")
+      format("truetype");
   font-weight: 700;
- 
 }
 
 /* padding setting */
 
-.padding{
-  padding-top:2.4rem;
-  padding-bottom:1.6rem;
+.padding {
+  padding-top: 2.4rem;
+  padding-bottom: 1.6rem;
 }
 
-@include mixins.mq-medium{
-.padding--medium{
-  padding-top:4.8rem;
-  padding-bottom:2.4rem;
-}
+@include mixins.mq-medium {
+  .padding--medium {
+    padding-top: 4.8rem;
+    padding-bottom: 2.4rem;
+  }
 }
 
 /* font setting */
-.page__header{
-  font-size:2.4rem;
-  line-height: 2;
-  font-weight:700;
-}
-
-.font__section-header{
-  font-size:2.4rem;
+.page__header {
+  font-size: 2.4rem;
   line-height: 2;
   font-weight: 700;
 }
 
-.font__sub-header{
-  font-size:1.4rem;
+.font__section-header {
+  font-size: 2.4rem;
+  line-height: 2;
+  font-weight: 700;
+}
+
+.font__sub-header {
+  font-size: 1.4rem;
   line-height: 1.375;
   font-weight: 600;
 }
 
-.font__body{
-  font-size:1.3rem;
+.font__body {
+  font-size: 1.3rem;
   line-height: 1.125;
   font-weight: 400;
 }
 
-@include mixins.mq-medium{
-  .page__header--medium{
-  font-size:6rem;
+@include mixins.mq-medium {
+
+.page__header--medium {
+  font-size: 6rem;
   line-height: 2.75;
-  font-weight:700;
+  font-weight: 700;
 }
 
-  .font__section-header--medium{
-  font-size:3.6rem;
+.font__section-header--medium {
+  font-size: 3.6rem;
   font-weight: 600;
-  }
+}
 
-  .font__sub-header--medium{
-    font-size:2.4rem;
-    line-height:3.2rem;
-  }
+.font__sub-header--medium {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
 
-  .font__body--medium{
-  font-size:1.4rem;
-  }
+.font__body--medium {
+  font-size: 1.4rem;
+}
 }

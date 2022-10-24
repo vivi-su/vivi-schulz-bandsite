@@ -12,7 +12,7 @@
     <header class="header">
       <a href="./index.html">
         <svg class="header__logo">
-          <use href="./assets/sprite.svg#Logo-bandsite " alt="Bandsite"></use>
+          <use href="./assets/sprite.svg#Logo-bandsite " title="Bandsite"></use>
         </svg>
       </a>
 
@@ -22,7 +22,7 @@
             <a class="header__menu-item-link" href="./index.html">Biography</a>
           </li>
           <li class="header__menu-item header__menu-item">
-            <a class="header__menu-item-link header__menu-item-link" href="./pages/shows.html"
+            <a class="header__menu-item-link" href="./pages/shows.html"
               >Shows</a
             >
           </li>
@@ -94,53 +94,53 @@
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-1.jpg"
-            alt="Photo-gallery-1"
+            alt="Excitement anticipation for the concert"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-2.jpg"
-            alt="Photo-gallery-2"
+            alt="Crowd captivated by the moment"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-3.jpg"
-            alt="Photo-gallery-3"
+            alt="Hands in the air"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-4.jpg"
-            alt="Photo-gallery-4"
+            alt="Female fan raising arm in the air"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-5.jpg"
-            alt="Photo-gallery-5"
+            alt="Confetti light show from the stage"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-6.jpg"
-            alt="Photo-gallery-6"
+            alt="Close-up of lead singer"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-7.jpg"
-            alt="Photo-gallery-7"
+            alt="Light show audience"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-8.jpg"
-            alt="Photo-gallery-8"
+            alt="DJ working sound control"
           />
           <img
             class="gallery__image"
             src="./assets/Images/Photo-gallery-9.jpg"
-            alt="Photo-gallery-9"
+            alt="Confetti falls on the crowd"
           />
         </div>
       </div>
     </aside>
 
-    <!-- form-->
+    <!-- form      ---->
     <section class="form">
       <h3 class="form__title">Join the Conversation</h3>
       <div class="form__section">
@@ -148,10 +148,10 @@
           </div>
          <form class="form__form" action="" method="">
               <label for="userName" >NAME</label>
-              <input id ="userName" name="userName" type="text" placeholder="Enter your name" autofocus>
+              <input id ="userName" name="userName" type="text" placeholder="Enter your name" minlentgth="1" maxlength="10" autofocus required>
            
               <label for="textArea">COMMENT</label>
-              <textarea  id="textArea" name="textArea" cols="20" rows="10" placeholder="Add a new comment"></textarea>
+              <textarea  id="textArea" name="textArea" cols="20" rows="5" placeholder="Add a new comment" minlentgth="3" maxlength="300"></textarea>
 
               <button>COMMENT</button>
         </form>
@@ -163,8 +163,8 @@
 
     <section class="comment">
    
-    <!-- <hr class="form__hr">
-    <article class="comment__section">
+    <hr class="form__hr">
+    <!-- <article class="comment__section">
         <div class="comment__message-wraper">
             <div class="comment__message-image" ></div>
         </div>
@@ -176,48 +176,10 @@
               <p class="comment__message-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore, ipsam sapiente saepe ex harum repellat esse at, illum non quaerat ducimus dolorem! Quas ex, ea ipsum exercitationem vel libero?</p>
             
         </section>
-    </article> 
+    </article>  -->
 
+    </section>
 
-    <hr class="comment__hr"> 
-    <article class="comment__section">
-        <div class="comment__message-wraper">
-            <div class="comment__message-image" ></div>
-        </div>
-        <section class="comment__message">
-             
-              <p class="comment__message-user">User</p>
-              <p class="comment__message-date">10/18/2022</p>
-              
-              <p class="comment__message-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore, ipsam sapiente saepe ex harum repellat esse at, illum non quaerat ducimus dolorem! Quas ex, ea ipsum exercitationem vel libero?</p>
-              
-        </section>
-          </article>
-          
-          
-    <hr class="comment__hr"> 
-    <article class="comment__section">
-        <div class="comment__message-wraper">
-            <div class="comment__message-image" ></div>
-        </div>
-        <section class="comment__message">
-             
-              <p class="comment__message-user">User</p>
-              <p class="comment__message-date">10/18/2022</p>
-              
-              <p class="comment__message-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat inventore, ipsam sapiente saepe ex harum repellat esse at, illum non quaerat ducimus dolorem! Quas ex, ea ipsum exercitationem vel libero?</p>
-              
-        </section>
-    </article>
-        -->
-
-
-    </section>  
-
-     
-
-
-    <!-- footer -->
     <footer class="footer">
       <div class="footer__wraper">
         <section class="footer__touch">
@@ -226,19 +188,19 @@
             <svg class="footer__icon">
               <use
                 xlink:href="./assets/sprite.svg#Icon-instagram"
-                alt="Icon-instagram"
+                title="Icon-instagram"
               ></use>
             </svg>
             <svg class="footer__icon">
               <use
                 href="./assets/sprite.svg#Icon-facebook "
-                alt="Icon-facebook"
+                title="Icon-facebook"
               ></use>
             </svg>
             <svg class="footer__icon">
               <use
                 href="./assets/sprite.svg#Icon-twitter "
-                alt="Icon-twitter"
+                title="Icon-twitter"
               ></use>
             </svg>
           </div>
@@ -262,7 +224,7 @@
                 New York, NY 10012, USA
               </p>
               <a href="mailto:info@thebeesknees.com?subject=Contact Us">
-                <p class="footer__content-inner--padding"">info@thebeesknees.com</p>
+                <p class="footer__content-inner--padding">info@thebeesknees.com</p>
               </a>
             </div>
           </section>
@@ -304,7 +266,7 @@
 
         <a href="./index.html">
           <svg class="footer__logo footer__logo--sm">
-            <use href="./assets/sprite.svg#Logo-bandsite " alt="Bandsite"></use>
+            <use href="./assets/sprite.svg#Logo-bandsite " title="Bandsite"></use>
           </svg>
         </a>
 

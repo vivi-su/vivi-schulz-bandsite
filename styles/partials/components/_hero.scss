@@ -21,7 +21,7 @@
     font-size: 2.4rem;
     padding: 2rem;
     font-weight: 600;
-    color: $primary-white;
+    color: $color-primary-ondark;
   }
 
   /* change hero opacity*/
@@ -44,7 +44,7 @@
       background-image: url(../../../assets/Images/hero-shows.jpg);
       background-position:20% 20%;
 
-      height:45vh;
+      height:45rem;
       padding:1.6rem;
       display: block;
     }
@@ -99,7 +99,7 @@
 
   /* styling for hero shows */
     &--shows{
-      height:50vh;
+      height:50rem;
     }
 
     &__shows-ifwrapper{
@@ -124,7 +124,7 @@
    /* styles for shows hero */
     &--shows{
       padding:13rem;
-      height:60vh;
+      height:55rem;
       
     }
 

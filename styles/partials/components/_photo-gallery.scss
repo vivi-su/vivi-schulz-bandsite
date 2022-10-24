@@ -1,18 +1,15 @@
 @use "../fonts" as *;
 @use "../colors" as *;
-// @use "../grid" as *;
 @use "../mixins" as mixins;
 
 .gallery{
     width:100%;
     height:auto;
-    background-color: $secondary-alabaster;
+    background-color: $color-alternative;
     padding-left:1.6rem;
     padding-right:1.6rem;
     
     &__image-wrap{
-        // @extend .grid;
-        // @extend .grid--1x3;
         padding-top:1.6rem;
         padding-bottom:1.6rem;
         
@@ -24,7 +21,7 @@
     font-size: 2.4rem;
     padding-top: 2.4rem;
     padding-bottom:1.6rem;
-    color:$primary-black;
+    color:$color-primary;
     }
 
     &__image{
