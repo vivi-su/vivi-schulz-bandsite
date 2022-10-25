@@ -76,12 +76,10 @@ const render = () => {
  
   const showsList = document.querySelector(".shows__list");
   showsList.innerHTML = "";
-  for (let i = 0; i <shows.length; i++) {
-    console.log(shows[i]);
-    renderShowsSet(shows[i], showsList);
-  
 
-  }
+  shows.forEach(show=> {
+    renderShowsSet(show, showsList);
+  });
 };
 
 render();
