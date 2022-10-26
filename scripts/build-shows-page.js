@@ -38,7 +38,7 @@ const renderShowsSet = (show, showsList) => {
   showsDateDetail.classList.add("shows__dateDetail");
 
   const now = show.date;
-  const today =  new Date(now);  
+  const today = new Date(now);  
   showsDateDetail.innerText = today.toDateString();
   showsContent.appendChild(showsDateDetail);
 
@@ -85,9 +85,10 @@ const usersURL =
 
 const axiosCall = axios.get(usersURL);
 axiosCall.then((resolve) => {
-          console.log(resolve);
+         
           render(resolve.data);  
-
           })
-
+          .catch((err) => {
+            console.log(err.err);
+          })
 
