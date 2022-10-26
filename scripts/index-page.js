@@ -1,11 +1,12 @@
+
+
 const getDate = (isToday) => {
- const d = new Date(isToday);
- const year = d.getUTCFullYear();
- const month = ((d.getUTCMonth() + 1 ) < 10 ? '0' :'') + (d.getUTCMonth() + 1 );
- const day = (d.getUTCDate() < 10 ? '0' : '') + d.getUTCDate();
+  const d = new Date(isToday);
+  const year = d.getUTCFullYear();
+  const month = (d.getUTCMonth() + 1 < 10 ? "0" : "") + (d.getUTCMonth() + 1);
+  const day = (d.getUTCDate() < 10 ? "0" : "") + d.getUTCDate();
 
-
- return `${month}/${day}/${year}`;
+  return `${month}/${day}/${year}`;
 };
 
 const nameInput = document.getElementById("userName");
@@ -33,7 +34,6 @@ const renderInput = (userInput, commentMessage) => {
   commentMessageD.classList.add("comment__message-date");
   const now = userInput.timestamp;
   const today = new Date(now);
-  
 
   commentMessageD.innerText = getDate(today);
 
@@ -78,38 +78,51 @@ const displayComment = (userInput) => {
   });
 };
 
-
+//form event listener
 const form = document.querySelector(".form__form");
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+
   const nameVal = event.target.userName.value;
   const commentVal = event.target.textArea.value;
-  const commentDate = getDate();
+  // const commentDate = getDate();
+  const postUrl = "https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}";
+
+  const commentInput = {
+    name: nameVal,
+    comment: commentVal
+  };
+  console.log(commentInput);
 
   if (nameVal !== "" && commentVal !== "") {
-    userInput.unshift({
-      name: nameVal,
-      date: commentDate,
-      content: commentVal,
-    });
-    displayComment();
-    event.target.reset();
+    // Postman Post
+    axios
+      .post(postUrl, commentInput)
+      .then((resolve) => { 
+       console.log(resolve.data);
+        // displayComment();
+        // event.target.reset();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+ 
+
   } else {
-    alert("Please type both Inputs");
+    alert("Please type your name and comments.");
   }
+
 });
 
+//Postman Get
+axios
+  .get("https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}")
+  .then((resolve) => {
 
-
-
-const usersURL =
-  "https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}";
-
-const axiosCall = axios.get(usersURL);
-axiosCall.then((resolve)=>{
-          displayComment(resolve.data);
-         })
-         .catch((err)=>{
-          console.log(err.err)
-         })
+    const cm = resolve.data;
+    console.log(cm);
+    displayComment(cm);
+  })
+  .catch((err) => {
+    console.log(err.err);
+  });
