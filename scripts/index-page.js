@@ -26,12 +26,12 @@ messageTextArea.addEventListener("blur", blurHandler);
 
 
 //render-------------------
-const render = (data) => {
+const render = (arr) => {
  
   const comment = document.querySelector(".comment");
   comment.innerHTML = " ";
 
-  data.forEach((key) => {
+ arr.forEach((key) => {
     const commentSection = document.createElement("article");
     commentSection.classList.add("comment__section");
     comment.appendChild(commentSection);
@@ -57,7 +57,7 @@ const render = (data) => {
      const now = key.timestamp;
      const today = new Date(now);
 
-     commentMessageD.innerText = getDate(today);
+    commentMessageD.innerText = getDate(today);
 
     const commentMessageC = document.createElement("p");
     commentMessageC.classList.add("comment__message-content");
@@ -75,10 +75,24 @@ const render = (data) => {
 
 
 
-//form event listener---------------------------------------------------
+//Postman Get----------------------------
+let commentArray = [];
+axios
+  .get("https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}")
+  .then((response) => {
+    commentArray = response.data.reverse();
+    render(commentArray);
+  })
+  .catch((err) => {
+    console.log(err.err);
+  });
+
+
+
+//form event listener---------------------
 const form = document.querySelector(".form__form");
 const checkFormClicked = form.addEventListener("submit", (event) => {
-  event.preventDefault();
+event.preventDefault();
 
   const nameVal = event.target.userName.value;
   const commentVal = event.target.textArea.value;
@@ -91,37 +105,22 @@ const checkFormClicked = form.addEventListener("submit", (event) => {
   console.log(commentInput);
 
   if (nameVal !== "" && commentVal !== "") {
-    // Postman Post
+    // Postman Post-----------------
   axios
       .post(postUrl, commentInput)
       .then((response) => {
         commentArray.unshift(response.data);
         render(commentArray);   
-        form.reset();   
+        console.log(`post array`,commentArray);
       })
       .catch((err) => {
         console.log(err);
       });
+
   event.target.reset();
 
   } else {
     alert("Please type your name and comments.");
-  }
-
+  }  
 });
 
-//----------------------------Postman Get----------------------------
-let commentArray = [];
-
-  const getUrl = axios.get(
-    "https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}"
-  );
-
-getUrl
-  .then((response) => {
-    commentArray = response.data;
-    render(commentArray);
-  })
-  .catch((err) => {
-    console.log(err.err);
-  });
