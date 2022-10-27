@@ -1,14 +1,13 @@
-
-
 const getDate = (isToday) => {
   const d = new Date(isToday);
-  const year = d.getUTCFullYear();
-  const month = (d.getUTCMonth() + 1 < 10 ? "0" : "") + (d.getUTCMonth() + 1);
-  const day = (d.getUTCDate() < 10 ? "0" : "") + d.getUTCDate();
+  const year = d.getFullYear();
+  const month = (d.getMonth() + 1 < 10 ? "0" : "") + (d.getMonth() + 1);
+  const day = (d.getDate() < 10 ? "0" : "") + d.getDate();
 
   return `${month}/${day}/${year}`;
 };
 
+//form focus---------------------
 const nameInput = document.getElementById("userName");
 const messageTextArea = document.getElementById("textArea");
 
@@ -25,56 +24,106 @@ nameInput.addEventListener("blur", blurHandler);
 messageTextArea.addEventListener("focus", focusHandler);
 messageTextArea.addEventListener("blur", blurHandler);
 
-const renderInput = (userInput, commentMessage) => {
-  const commentMessageU = document.createElement("p");
-  commentMessageU.classList.add("comment__message-user");
-  commentMessageU.innerText = userInput.name;
 
-  const commentMessageD = document.createElement("p");
-  commentMessageD.classList.add("comment__message-date");
-  const now = userInput.timestamp;
-  const today = new Date(now);
 
-  commentMessageD.innerText = getDate(today);
-
-  const commentMessageC = document.createElement("p");
-  commentMessageC.classList.add("comment__message-content");
-  commentMessageC.innerText = userInput.comment;
-
-  commentMessage.appendChild(commentMessageU);
-  commentMessage.appendChild(commentMessageD);
-  commentMessage.appendChild(commentMessageC);
-};
-
-const renderSection = (input, comment) => {
-  const commentSection = document.createElement("article");
-  commentSection.classList.add("comment__section");
-  comment.appendChild(commentSection);
-
-  const commentMessageWraper = document.createElement("div");
-  commentMessageWraper.classList.add("comment__message-wraper");
-  commentSection.appendChild(commentMessageWraper);
-
-  const commentMessageImage = document.createElement("div");
-  commentMessageImage.classList.add("comment__message-image");
-  commentMessageWraper.appendChild(commentMessageImage);
-
-  const commentMessage = document.createElement("section");
-  commentMessage.classList.add("comment__message");
-  commentSection.appendChild(commentMessage);
-
-  renderInput(input, commentMessage);
-  const createHr = document.createElement("hr");
-  createHr.classList.add("form__hr");
-  comment.appendChild(createHr);
-};
-
-const displayComment = (userInput) => {
+//render-------------------
+const render = (data) => {
+  console.log(data);
   const comment = document.querySelector(".comment");
   comment.innerHTML = " ";
 
-  userInput.forEach((input) => {
-    renderSection(input, comment);
+  data.forEach((key) => {
+    const commentSection = document.createElement("article");
+    commentSection.classList.add("comment__section");
+    comment.appendChild(commentSection);
+
+    const commentMessageWraper = document.createElement("div");
+    commentMessageWraper.classList.add("comment__message-wraper");
+    commentSection.appendChild(commentMessageWraper);
+
+    const commentMessageImage = document.createElement("div");
+    commentMessageImage.classList.add("comment__message-image");
+    commentMessageWraper.appendChild(commentMessageImage);
+
+    const commentMessage = document.createElement("section");
+    commentMessage.classList.add("comment__message");
+    commentSection.appendChild(commentMessage);
+
+    const commentMessageU = document.createElement("p");
+    commentMessageU.classList.add("comment__message-user");
+    commentMessageU.innerText = key.name;
+
+    const commentMessageD = document.createElement("p");
+    commentMessageD.classList.add("comment__message-date");
+     const now = key.timestamp;
+     const today = new Date(now);
+
+     commentMessageD.innerText = getDate(today);
+
+    const commentMessageC = document.createElement("p");
+    commentMessageC.classList.add("comment__message-content");
+    commentMessageC.innerText = key.comment;
+
+    commentMessage.appendChild(commentMessageU);
+    commentMessage.appendChild(commentMessageD);
+    commentMessage.appendChild(commentMessageC);
+
+    const createHr = document.createElement("hr");
+    createHr.classList.add("form__hr");
+    comment.appendChild(createHr);
+    console.log(`call me babay1`);
+  });
+};
+
+//render-------------------
+const render2 = (data) => {
+  console.log(`data2`,data);
+  console.log(Object.values(data));
+  const comment = document.querySelector(".comment");
+  comment.innerHTML = " ";
+
+  const arr=[];
+  arr.push(data);
+  console.log(arr);
+  arr.forEach(() => {
+    const commentSection = document.createElement("article");
+    commentSection.classList.add("comment__section");
+    comment.appendChild(commentSection);
+
+    const commentMessageWraper = document.createElement("div");
+    commentMessageWraper.classList.add("comment__message-wraper");
+    commentSection.appendChild(commentMessageWraper);
+
+    const commentMessageImage = document.createElement("div");
+    commentMessageImage.classList.add("comment__message-image");
+    commentMessageWraper.appendChild(commentMessageImage);
+
+    const commentMessage = document.createElement("section");
+    commentMessage.classList.add("comment__message");
+    commentSection.appendChild(commentMessage);
+
+    const commentMessageU = document.createElement("p");
+    commentMessageU.classList.add("comment__message-user");
+    commentMessageU.innerText = data.name;
+
+    const commentMessageD = document.createElement("p");
+    commentMessageD.classList.add("comment__message-date");
+     const today = new Date();
+
+     commentMessageD.innerText = getDate(today);
+
+    const commentMessageC = document.createElement("p");
+    commentMessageC.classList.add("comment__message-content");
+    commentMessageC.innerText = data.comment;
+
+    commentMessage.appendChild(commentMessageU);
+    commentMessage.appendChild(commentMessageD);
+    commentMessage.appendChild(commentMessageC);
+
+    const createHr = document.createElement("hr");
+    createHr.classList.add("form__hr");
+    comment.appendChild(createHr);
+    console.log(`call me babay2`);
   });
 };
 
@@ -98,15 +147,22 @@ form.addEventListener("submit", (event) => {
     // Postman Post
     axios
       .post(postUrl, commentInput)
-      .then((resolve) => { 
-       console.log(resolve.data);
-        // displayComment();
-        // event.target.reset();
+      .then((response) => {
+        console.log('data2 origin',response);
+        return response.data;
+      })
+      .then((response)=>{
+        render2(response);
+        return response;
+      })
+      .then(()=>{
+        call();
+         
       })
       .catch((err) => {
         console.log(err);
-      });
- 
+      })
+  event.target.reset();
 
   } else {
     alert("Please type your name and comments.");
@@ -115,14 +171,15 @@ form.addEventListener("submit", (event) => {
 });
 
 //Postman Get
+const call = ()=>{
 axios
   .get("https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}")
-  .then((resolve) => {
-
-    const cm = resolve.data;
-    console.log(cm);
-    displayComment(cm);
-  })
+  .then(response =>response.data)
+  .then(render)
   .catch((err) => {
     console.log(err.err);
-  });
+  })
+}
+
+call();
+
