@@ -26,11 +26,18 @@ messageTextArea.addEventListener("blur", blurHandler);
 
 
 
+const generateContent = (data) => {
+
+};
+
+
 //render-------------------
 const render = (data) => {
-  console.log(data);
+ 
   const comment = document.querySelector(".comment");
   comment.innerHTML = " ";
+
+  generateContent(data);
 
   data.forEach((key) => {
     const commentSection = document.createElement("article");
@@ -77,15 +84,14 @@ const render = (data) => {
 
 //render-------------------
 const render2 = (data) => {
-  console.log(`data2`,data);
-  console.log(Object.values(data));
+
   const comment = document.querySelector(".comment");
   comment.innerHTML = " ";
 
-  const arr=[];
-  arr.push(data);
+ let arr=[];
+  arr.unshift(data);
   console.log(arr);
-  arr.forEach(() => {
+  arr += arr.forEach(() => {
     const commentSection = document.createElement("article");
     commentSection.classList.add("comment__section");
     comment.appendChild(commentSection);
@@ -127,9 +133,11 @@ const render2 = (data) => {
   });
 };
 
+
+
 //form event listener
 const form = document.querySelector(".form__form");
-form.addEventListener("submit", (event) => {
+const checkFormClicked = form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const nameVal = event.target.userName.value;
@@ -145,23 +153,21 @@ form.addEventListener("submit", (event) => {
 
   if (nameVal !== "" && commentVal !== "") {
     // Postman Post
-    axios
+  axios
       .post(postUrl, commentInput)
       .then((response) => {
-        console.log('data2 origin',response);
+        console.log("data2 origin", response);
         return response.data;
       })
-      .then((response)=>{
+
+      .then((response) => {
         render2(response);
         return response;
       })
-      .then(()=>{
-        call();
-         
-      })
+
       .catch((err) => {
         console.log(err);
-      })
+      });
   event.target.reset();
 
   } else {
@@ -172,14 +178,22 @@ form.addEventListener("submit", (event) => {
 
 //Postman Get
 const call = ()=>{
-axios
-  .get("https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}")
-  .then(response =>response.data)
-  .then(render)
-  .catch((err) => {
-    console.log(err.err);
+
+  const defaultUrl =
+    "https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}";
+axios.get(defaultUrl)
+     .then(response =>response.data)
+     .then(render)
+     .catch((err) => {
+         console.log(err.err);
   })
 }
 
-call();
+let buttonClicked = true;
 
+if (buttonClicked){
+call();
+}else{
+form.reset();
+checkFormClicked();
+}
