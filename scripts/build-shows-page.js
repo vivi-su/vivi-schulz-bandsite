@@ -1,33 +1,67 @@
-let createBtn = (text, showsContent) => {
-    const btn = document.createElement("button");
-    btn.classList.add("shows__btn");
-    btn.innerText =text;
-    showsContent.appendChild(btn);
-    btn.addEventListener('click', buttonHandler);  
 
-     function buttonHandler(){
-     let called = false;
-      if(called){
-        btn.removeEventListener('click', buttonHandler);
-      }else{
-        called=true;
-        btn.classList.toggle("shows__btn--active");
-      }
-       return btn;
+
+
+let createBtn = (text, showsContent) => {
+  const btn = document.createElement("button");
+  btn.classList.add("shows__btn");
+  btn.innerText = text;
+  showsContent.appendChild(btn);
+  btn.addEventListener("click", buttonHandler);
+
+  function buttonHandler() {
+    let called = false;
+    if (called) {
+      btn.removeEventListener("click", buttonHandler);
+    } else {
+      called = true;
+      btn.classList.toggle("shows__btn--active");
     }
-  };
+    return btn;
+  }
+};
+
+
 
 const createDivider = (showsContent) => {
-  const divider = document.createElement("hr");
-  divider.classList.add('shows__hr');
-    showsContent.appendChild(divider);
-};
+  // const divider = document.createElement("hr");
+  // divider.classList.add("shows__hr");
+  // showsContent.appendChild(divider);
+  showsContent.style.padding = "1.6rem";
+  showsContent.style.borderBottom = "1px solid #E1E1E1"
+
+
+      showsContent.addEventListener(
+      "mouseover",
+      (handleMouseOver = () => {
+        showsContent.style.borderBottom = 0;
+        })
+      );
+
+      showsContent.addEventListener('mouseout', handleMouseOut = () =>{
+        showsContent.style.borderBottom = "1px solid #E1E1E1";
+      })  
+
+      showsContent.addEventListener(
+        "click", handleMouseClick)
+      
+       function handleMouseClick() {
+         let called = false;
+         if (called) {
+           showsContent.removeEventListener("click", handleMouseClick);
+         } else {
+           called = true;
+           showsContent.classList.toggle('shows__content--active');
+         }
+         return showsContent;
+       }
+        
+  };
 
 
 const renderShowsSet = (show, showsList) => {
   const showsContent = document.createElement("div");
   showsContent.classList.add("shows__content");
-
+  showsContent.setAttribute("id", show.id);
 
   //------------------show date-----------------
   const showsDate = document.createElement("p");
@@ -37,11 +71,13 @@ const renderShowsSet = (show, showsList) => {
 
   const showsDateDetail = document.createElement("p");
   showsDateDetail.classList.add("shows__dateDetail");
-  showsDateDetail.innerText = show.date;
+
+  const now = show.date;
+  const today = new Date(now);  
+  showsDateDetail.innerText = today.toDateString();
   showsContent.appendChild(showsDateDetail);
 
 
-  
   //------------------show venue-----------------
   const showsVenue = document.createElement("p");
   showsVenue.classList.add("shows__venue");
@@ -50,7 +86,7 @@ const renderShowsSet = (show, showsList) => {
 
   const showsVenueDetail = document.createElement("p");
   showsVenueDetail.classList.add("shows__venueDetail");
-  showsVenueDetail.innerText = show.venue;
+  showsVenueDetail.innerText = show.place;
   showsContent.appendChild(showsVenueDetail);
 
   //------------------show location-----------------
@@ -65,23 +101,29 @@ const renderShowsSet = (show, showsList) => {
   showsContent.appendChild(showsLocationDetail);
 
   showsList.appendChild(showsContent);
-  createBtn('BUY TICKET', showsContent);
+  createBtn("BUY TICKET", showsContent);
   createDivider(showsContent);
-};;
-
-
-
-
-const render = () => {
- 
-  const showsList = document.querySelector(".shows__list");
-  showsList.innerHTML = "";
-  for (let i = 0; i <shows.length; i++) {
-    console.log(shows[i]);
-    renderShowsSet(shows[i], showsList);
-  
-
-  }
 };
 
-render();
+const render = (shows) => {
+  const showsList = document.querySelector(".shows__list");
+  showsList.innerHTML = "";
+
+  shows.forEach((show) => {
+    renderShowsSet(show, showsList);
+  });
+};
+
+
+const usersURL =
+  "https://project-1-api.herokuapp.com/showdates?api_key={{SPRINT3__KEY}}";
+
+const axiosCall = axios.get(usersURL);
+axiosCall.then((resolve) => {
+         
+          render(resolve.data);  
+          })
+          .catch((err) => {
+            console.log(err.err);
+          })
+

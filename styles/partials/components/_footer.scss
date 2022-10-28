@@ -9,9 +9,15 @@
   background-color: $color-primary;
   color:$color-primary-ondark;
 
-padding: 3.2rem 1.6rem 2.4rem 1.6rem;
+  padding: 3.2rem 1.6rem 2.4rem 1.6rem;
   line-height: 1.2;
   width:100vw;
+  
+
+  a{
+    color:$color-primary-ondark;
+  }
+
   p {
     font-size: 1.3rem;
   }
@@ -43,6 +49,7 @@ padding: 3.2rem 1.6rem 2.4rem 1.6rem;
   &__icon-wrap {
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
+
   }
 
   &__content {

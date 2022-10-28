@@ -8,6 +8,7 @@
     
     &__title-modify-wrapper{
         display: none;
+        padding-left:1.6rem;
     }
 
     &__btn{
@@ -24,10 +25,13 @@
         }
     }
 
-    &__hr{
-    border:1px solid $color-outline;
-    margin-top: 2.4rem;
-    margin-bottom:1.6rem;
+    &__content{
+
+     
+        &--active{
+            background-color:$color-outline; 
+        }
+
     }
     
     &__title{
@@ -105,9 +109,9 @@
     }
 
     &__hr{
-position:absolute;
-top:30px;
-width:100%;
+    position:absolute;
+    top:30px;
+    width:100%;
     }
 
 }
