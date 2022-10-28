@@ -66,10 +66,6 @@ const render = (arr) => {
     commentMessage.appendChild(commentMessageU);
     commentMessage.appendChild(commentMessageD);
     commentMessage.appendChild(commentMessageC);
-
-    const createHr = document.createElement("hr");
-    createHr.classList.add("form__hr");
-    comment.appendChild(createHr);
   });
 };
 
