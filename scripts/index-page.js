@@ -1,3 +1,22 @@
+
+const getAvatar = () => {
+      const avatarArr = [
+        "./assets/avatar/1.png",
+        "./assets/avatar/2.png",
+        "./assets/avatar/3.png",
+        "./assets/avatar/4.png",
+        "./assets/avatar/5.png",
+        "./assets/avatar/6.png",
+        "./assets/avatar/7.png",
+      ];
+      
+      const random = Math.floor(Math.random() * avatarArr.length) + 0;
+
+      return avatarArr[random];
+   
+
+}
+
 const getDate = (isToday) => {
   const d = new Date(isToday);
   const year = d.getFullYear();
@@ -24,14 +43,12 @@ nameInput.addEventListener("blur", blurHandler);
 messageTextArea.addEventListener("focus", focusHandler);
 messageTextArea.addEventListener("blur", blurHandler);
 
-
 //render-------------------
 const render = (arr) => {
- 
   const comment = document.querySelector(".comment");
   comment.innerHTML = " ";
 
- arr.forEach((key) => {
+  arr.forEach((key) => {
     const commentSection = document.createElement("article");
     commentSection.classList.add("comment__section");
     comment.appendChild(commentSection);
@@ -40,8 +57,11 @@ const render = (arr) => {
     commentMessageWraper.classList.add("comment__message-wraper");
     commentSection.appendChild(commentMessageWraper);
 
-    const commentMessageImage = document.createElement("div");
+    const commentMessageImage = document.createElement("img");
     commentMessageImage.classList.add("comment__message-image");
+
+    commentMessageImage.src = getAvatar();
+
     commentMessageWraper.appendChild(commentMessageImage);
 
     const commentMessage = document.createElement("section");
@@ -54,8 +74,8 @@ const render = (arr) => {
 
     const commentMessageD = document.createElement("p");
     commentMessageD.classList.add("comment__message-date");
-     const now = key.timestamp;
-     const today = new Date(now);
+    const now = key.timestamp;
+    const today = new Date(now);
 
     commentMessageD.innerText = getDate(today);
 
@@ -69,8 +89,6 @@ const render = (arr) => {
   });
 };
 
-
-
 //Postman Get----------------------------
 let commentArray = [];
 axios
@@ -83,40 +101,37 @@ axios
     console.log(err.err);
   });
 
-
-
 //form event listener---------------------
 const form = document.querySelector(".form__form");
 const checkFormClicked = form.addEventListener("submit", (event) => {
-event.preventDefault();
+  event.preventDefault();
 
   const nameVal = event.target.userName.value;
   const commentVal = event.target.textArea.value;
-  const postUrl = "https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}";
+  const postUrl =
+    "https://project-1-api.herokuapp.com/comments?api_key={{SPRINT3__KEY}}";
 
   const commentInput = {
     name: nameVal,
-    comment: commentVal
+    comment: commentVal,
   };
   console.log(commentInput);
 
   if (nameVal !== "" && commentVal !== "") {
     // Postman Post-----------------
-  axios
+    axios
       .post(postUrl, commentInput)
       .then((response) => {
         commentArray.unshift(response.data);
-        render(commentArray);   
-        console.log(`post array`,commentArray);
+        render(commentArray);
+        console.log(`post array`, commentArray);
       })
       .catch((err) => {
         console.log(err);
       });
 
-  event.target.reset();
-
+    event.target.reset();
   } else {
     alert("Please type your name and comments.");
-  }  
+  }
 });
-
