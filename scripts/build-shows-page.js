@@ -1,3 +1,6 @@
+
+
+
 let createBtn = (text, showsContent) => {
   const btn = document.createElement("button");
   btn.classList.add("shows__btn");
@@ -17,11 +20,43 @@ let createBtn = (text, showsContent) => {
   }
 };
 
+
+
 const createDivider = (showsContent) => {
-  const divider = document.createElement("hr");
-  divider.classList.add("shows__hr");
-  showsContent.appendChild(divider);
-};
+  // const divider = document.createElement("hr");
+  // divider.classList.add("shows__hr");
+  // showsContent.appendChild(divider);
+  showsContent.style.padding = "1.6rem";
+  showsContent.style.borderBottom = "1px solid #E1E1E1"
+
+
+      showsContent.addEventListener(
+      "mouseover",
+      (handleMouseOver = () => {
+        showsContent.style.borderBottom = 0;
+        })
+      );
+
+      showsContent.addEventListener('mouseout', handleMouseOut = () =>{
+        showsContent.style.borderBottom = "1px solid #E1E1E1";
+      })  
+
+      showsContent.addEventListener(
+        "click", handleMouseClick)
+      
+       function handleMouseClick() {
+         let called = false;
+         if (called) {
+           showsContent.removeEventListener("click", handleMouseClick);
+         } else {
+           called = true;
+           showsContent.classList.toggle('shows__content--active');
+         }
+         return showsContent;
+       }
+        
+  };
+
 
 const renderShowsSet = (show, showsList) => {
   const showsContent = document.createElement("div");

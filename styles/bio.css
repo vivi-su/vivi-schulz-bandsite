@@ -221,7 +221,7 @@ li {
 }
 .hero {
   width: 100vw;
-  height: 25vh;
+  height: 20rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -281,7 +281,7 @@ li {
 /* styles for hero on tablet device */
 @media only screen and (min-width: 768px) {
   .hero {
-    height: 60vh;
+    height: 50rem;
     /* styling for hero shows */
   }
   .hero__title {
@@ -654,6 +654,9 @@ li {
   padding: 3.2rem 1.6rem 2.4rem 1.6rem;
   line-height: 1.2;
   width: 100vw;
+}
+.footer a {
+  color: #FFFFFF;
 }
 .footer p {
   font-size: 1.3rem;
