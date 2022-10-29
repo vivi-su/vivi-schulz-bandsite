@@ -457,6 +457,16 @@ li {
 .gallery__image:hover {
   filter: grayscale(0);
 }
+.gallery__image:nth-child(even) {
+  filter: grayscale(90%);
+  filter: sepia(60%);
+  opacity: 0.7;
+}
+.gallery__image:nth-child(even):hover {
+  filter: grayscale(0);
+  filter: sepia(0);
+  opacity: 1;
+}
 
 @media only screen and (min-width: 768px) {
   .gallery__title {
