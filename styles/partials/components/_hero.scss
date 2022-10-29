@@ -3,7 +3,8 @@
 @use "../mixins" as mixins;
 
 .hero {
-  width: 100vw;
+ 
+  width: 100%;
   height: 20rem;
   text-align: center;
   @include mixins.flexed(column, center, flex-start);

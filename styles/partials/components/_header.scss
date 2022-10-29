@@ -9,6 +9,8 @@
   font-style: normal;
   font-weight: 400;
   text-align: center;
+  // max-width: 1280px;
+  // margin:0 auto;
 
   @include mixins.flexed(column, center, space-evenly);
   width: 100%;
@@ -85,7 +87,7 @@
       &--active{
         border-bottom: 4px solid $color-primary-ondark;
       }
-      
+
     }
   }
 }
