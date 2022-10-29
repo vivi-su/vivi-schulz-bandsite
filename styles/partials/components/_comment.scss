@@ -61,7 +61,6 @@
   &__section {
     @include mixins.flexed(row, flex-start, flex-start);
     margin-top:2.4rem;
-    // margin-bottom:1.6rem;
     border-bottom: 1px solid $color-outline;
     padding-bottom:2rem;
   }
