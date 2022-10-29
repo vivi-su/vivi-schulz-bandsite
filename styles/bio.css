@@ -426,7 +426,7 @@ li {
   }
 }
 .gallery {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   background-color: #FAFAFA;
   padding-left: 1.6rem;
@@ -435,6 +435,7 @@ li {
 .gallery__image-wrap {
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
+  margin: 0 auto;
 }
 .gallery__title {
   font-weight: 600;
@@ -447,7 +448,6 @@ li {
   padding-bottom: 1.6rem;
   width: 100%;
   height: auto;
-  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
@@ -464,17 +464,12 @@ li {
     padding-top: 4.8rem;
     padding-bottom: 3.6rem;
   }
-  .gallery__wrap {
-    width: 90vw;
-    margin: 0 auto;
-  }
   .gallery__image-wrap {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
     padding-top: 0;
     padding-bottom: 4.8rem;
   }

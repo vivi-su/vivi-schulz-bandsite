@@ -3,19 +3,17 @@
 @use "../mixins" as mixins;
 
 .gallery{
-    width:100%;
+    max-width:100%;
     height:auto;
     background-color: $color-alternative;
     padding-left:1.6rem;
     padding-right:1.6rem;
-    // max-width:1280px;
-    // margin:0 auto;
+   
     
     &__image-wrap{
         padding-top:1.6rem;
         padding-bottom:1.6rem;
-        
-
+        margin:0 auto;
     }
 
     &__title{
@@ -30,7 +28,6 @@
         padding-bottom:1.6rem;
         width:100%;
         height:auto;
-        max-width:100%;
         object-fit:cover;
         cursor: pointer;
         filter:grayscale(70%);
@@ -49,19 +46,13 @@
             padding-top: 4.8rem;
             padding-bottom:3.6rem;
         }
-     
-        &__wrap{
-            width:90vw;
-            margin:0 auto;   
-
-        }
 
         &__image-wrap{
             @include mixins.flexed(row, center, center);
             flex-wrap: wrap;
-            margin: 0 auto;
             padding-top:0;
             padding-bottom:4.8rem;
+        
         }
 
         &__image{
