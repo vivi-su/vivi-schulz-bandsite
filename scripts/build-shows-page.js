@@ -23,9 +23,7 @@ let createBtn = (text, showsContent) => {
 
 
 const createDivider = (showsContent) => {
-  // const divider = document.createElement("hr");
-  // divider.classList.add("shows__hr");
-  // showsContent.appendChild(divider);
+
   showsContent.style.padding = "1.6rem";
   showsContent.style.borderBottom = "1px solid #E1E1E1"
 
