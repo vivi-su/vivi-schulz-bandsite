@@ -5,6 +5,8 @@ body {
   font-family: "Avenir", Arial;
   font-size: 62.5%;
   box-sizing: border-box;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 p,
@@ -169,7 +171,7 @@ li {
   border-bottom: 4px solid transparent;
   transition: border 0.2s ease-in-out;
 }
-.header__menu-item:hover, .header__menu-item:active {
+.header__menu-item:hover, .header__menu-item--active {
   font-weight: 600;
   border-bottom: 4px solid #FFFFFF;
 }
@@ -215,12 +217,12 @@ li {
     padding: 3.2rem 0;
     border-bottom: 4px solid transparent;
   }
-  .header__menu-item-link:hover, .header__menu-item-link:active {
+  .header__menu-item-link:hover, .header__menu-item-link:active, .header__menu-item-link--active {
     border-bottom: 4px solid #FFFFFF;
   }
 }
 .hero {
-  width: 100vw;
+  width: 100%;
   height: 20rem;
   text-align: center;
   display: flex;
@@ -656,6 +658,7 @@ li {
   padding: 3.2rem 1.6rem 2.4rem 1.6rem;
   line-height: 1.2;
   width: 100vw;
+  max-width: 1280px;
 }
 .footer a {
   color: #FFFFFF;
@@ -668,7 +671,7 @@ li {
   font-weight: 600;
 }
 .footer__wraper {
-  width: 90vw;
+  width: 100%;
   margin: 0 auto;
 }
 .footer__touch-title {

@@ -9,6 +9,8 @@
   font-style: normal;
   font-weight: 400;
   text-align: center;
+  // max-width: 1280px;
+  // margin:0 auto;
 
   @include mixins.flexed(column, center, space-evenly);
   width: 100%;
@@ -34,16 +36,19 @@
     transition: border 0.2s ease-in-out;
 
     &:hover,
-    &:active {
+    &--active{
       font-weight: 600;
       border-bottom: 4px solid $color-primary-ondark;
     }
+
   }
 
   &__menu-item-link {
     color: $color-primary-ondark;  
   }
 }
+
+
 /* styles for header on tablet device */
 
 @include mixins.mq-medium {
@@ -70,15 +75,19 @@
       &:hover {
         border-bottom: 0;
       }
+
+    
     }
     &__menu-item-link {
       font-size: 2.4rem;
       padding: 3.2rem 0;
       border-bottom: 4px solid transparent;
       &:hover,
-      &:active {
+      &:active,
+      &--active{
         border-bottom: 4px solid $color-primary-ondark;
       }
+
     }
   }
 }

@@ -1,4 +1,3 @@
-
 const getAvatar = () => {
       const avatarArr = [
         "./assets/avatar/1.png",
@@ -26,6 +25,8 @@ const getDate = (isToday) => {
   return `${month}/${day}/${year}`;
 };
 
+
+
 //form focus---------------------
 const nameInput = document.getElementById("userName");
 const messageTextArea = document.getElementById("textArea");
@@ -44,9 +45,10 @@ messageTextArea.addEventListener("focus", focusHandler);
 messageTextArea.addEventListener("blur", blurHandler);
 
 //render-------------------
+
 const render = (arr) => {
   const comment = document.querySelector(".comment");
-  comment.innerHTML = " ";
+  comment.innerHTML = " ";  
 
   arr.forEach((key) => {
     const commentSection = document.createElement("article");
@@ -87,7 +89,31 @@ const render = (arr) => {
     commentMessage.appendChild(commentMessageD);
     commentMessage.appendChild(commentMessageC);
   });
-};
+
+const headerMenuItemLink = document.querySelectorAll(".header__menu-item-link");
+headerMenuItemLink.forEach(item => {
+  item.addEventListener('click',() => {
+  item.classList.toggle('header__menu-item-link--active');  
+  if (!item) {
+    item.classList("header__menu-item-link");
+  }
+})
+
+})
+
+
+const headerMenuItem = document.querySelectorAll('.header__menu-item');
+headerMenuItem.forEach((item) => {
+  item.addEventListener('click',() => {
+  item.classList.toggle('header__menu-item--active'); 
+  if(!item){item.classList("header__menu-item"); }
+
+})
+   
+})
+
+
+}
 
 //Postman Get----------------------------
 let commentArray = [];

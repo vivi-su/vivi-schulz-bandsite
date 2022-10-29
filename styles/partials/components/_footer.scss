@@ -12,6 +12,7 @@
   padding: 3.2rem 1.6rem 2.4rem 1.6rem;
   line-height: 1.2;
   width:100vw;
+  max-width: 1280px;
   
 
   a{
@@ -28,7 +29,7 @@
   }
 
   &__wraper {
-    width: 90vw;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -49,6 +50,7 @@
   &__icon-wrap {
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
+  
 
   }
 
@@ -78,6 +80,8 @@
   &__logo--md {
     display: none;
   }
+
+
 }
 
 @include mixins.mq-medium {
@@ -103,12 +107,13 @@
 
     &__touch {
       @include mixins.flexed(row, flex-start, center);
+   
     }
 
     &__icon-wrap {
       flex-basis: 20rem;
       margin-left: 3rem;
-      flex-grow: 1;
+      flex-grow:1;
     }
 
     &__content {
@@ -133,6 +138,7 @@
    padding-right:8rem;
 
    &__logo--md {
+ 
     position:relative;
    left:-10px;
   }
